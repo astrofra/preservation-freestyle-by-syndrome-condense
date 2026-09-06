@@ -1,78 +1,87 @@
 # Preservation of FreeStyle
 
-Extraction des ressources de **FreeStyle**, démo Win32 de Condense / Syndrome
-(2000), codée par xBaRr. Les fichiers de distribution sont conservés dans
-`demo-releases/` et `demo-unpack/`.
+![alt text](img/3f8d.149952.png)
+![alt text](img/9321.149951.png)
+![alt text](img/d498.149950.png)
 
-## Compiler sous Windows
+Asset extraction for **FreeStyle**, a Win32 demo by Condense / Syndrome
+(2000), coded by xBaRr. The distribution files are preserved in
+`demo-releases/` and `demo-unpack/`.
 
-CMake 3.15 ou plus récent et Visual Studio avec les outils C/C++ suffisent :
+## Building on Windows
+
+All you need is CMake 3.15 or later and Visual Studio with the C/C++ tools:
 
 ```powershell
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64
 cmake --build build --config Release
 ```
 
-Le résultat est **`bin/klx_unpack.exe`**. Comme dans
-`preservation-hcl-demos`, l'extracteur tient dans un fichier C99, utilise
-`/W4 /WX` avec MSVC et lie statiquement le runtime C (`/MT`).
-Il n'utilise aucune bibliothèque externe : ni zlib, ni Python, ni émulateur.
-Le binaire Windows x64 fourni importe uniquement `KERNEL32.dll`.
+The output is **`bin/klx_unpack.exe`**. As in
+`preservation-hcl-demos`, the extractor fits in a single C99 file, uses
+`/W4 /WX` with MSVC, and statically links the C runtime (`/MT`).
+It uses no external libraries: no zlib, Python, or emulator.
+The supplied Windows x64 binary imports only `KERNEL32.dll`.
 
-## Extraire
+## Extracting
 
-Depuis la racine du projet, vers un dossier qui n'existe pas encore :
+From the project root, extract to a directory that does not yet exist:
 
 ```powershell
 .\bin\klx_unpack.exe demo-unpack\cds-freestyle\Freestyle\FreeStyle.klx demo-assets\cds-freestyle
 ```
 
-Cette extraction a déjà été effectuée dans `demo-assets/cds-freestyle/`.
-Pour la refaire, choisir une autre destination.
+The assets have already been extracted to `demo-assets/cds-freestyle/`.
+To extract them again, choose a different destination.
 
-Les chemins d'origine deviennent des chemins locaux :
-`D:\FreeStyle\Acet1.jpg` devient `D/FreeStyle/Acet1.jpg` sous la destination.
-La casse et les accents Windows-1252 sont conservés. Les fichiers eux-mêmes
-restent identiques aux données décodées par la démo ; les références absolues
-à l'intérieur des scènes ne sont pas réécrites.
+Original paths become local paths:
+`D:\FreeStyle\Acet1.jpg` becomes `D/FreeStyle/Acet1.jpg` under the destination.
+Letter case and Windows-1252 accents are preserved. The extracted files
+remain identical to the data decoded by the demo; absolute references
+inside scenes are not rewritten.
 
-Afficher l'index sans extraire :
+The repository's copies of `demo-assets/cds-freestyle/D/FreeStyle/script.txt`
+and the greetings in `demo-unpack/cds-freestyle/Freestyle/Freestyle.nfo`
+have been translated into English. Their original French text remains in
+the archives; the reference hashes describe the original extracted files.
+
+Display the index without extracting:
 
 ```powershell
 .\bin\klx_unpack.exe --list demo-unpack\cds-freestyle\Freestyle\FreeStyle.klx
 ```
 
-L'archive contient **161 fichiers**, soit **1 532 731 octets** décodés :
+The archive contains **161 files**, totaling **1,532,731 decoded bytes**:
 
-| Type | Nombre | Contenu vérifié |
+| Type | Count | Verified contents |
 |---|---:|---|
-| `.jpg` | 72 | Images JPEG, décodage complet vérifié |
-| `.lwo` | 64 | Objets LightWave `FORM/LWOB` |
-| `.lws` | 11 | Scènes LightWave `LWSC`, version 1 |
-| `.moa` | 12 | Fichiers propriétaires avec signature `MOA3` |
-| `.mo3` | 1 | `D/FreeStyle/BGM/Mush.mo3`, signature `MO3` |
-| `.txt` | 1 | Script / déroulé de la démo |
+| `.jpg` | 72 | JPEG images, full decoding verified |
+| `.lwo` | 64 | LightWave `FORM/LWOB` objects |
+| `.lws` | 11 | LightWave `LWSC` scenes, version 1 |
+| `.moa` | 12 | Proprietary files with the `MOA3` signature |
+| `.mo3` | 1 | `D/FreeStyle/BGM/Mush.mo3`, `MO3` signature |
+| `.txt` | 1 | Demo script / timeline |
 
-Il n'y a pas de TGA ni de MP3 autonome dans cet index. La musique est extraite
-dans son conteneur MO3 d'origine, sans conversion audio.
+There are no TGA files or standalone MP3 files in this index. The music is
+extracted in its original MO3 container, without audio conversion.
 
-## Vérifier
+## Verifying
 
-Les tests utilisent uniquement la bibliothèque standard de Python 3.10+ ;
-Python reste facultatif pour compiler et utiliser l'extracteur.
+The tests use only the Python 3.10+ standard library;
+Python is optional for building and using the extractor.
 
 ```powershell
 ctest --test-dir build -C Release --output-on-failure
-# Ou directement :
+# Or directly:
 python tests\unpack.py
 ```
 
-Les empreintes SHA-256 des 161 fichiers de référence proviennent de la routine
-x86 originale exécutée sous émulation pour l'analyse. Les tests comparent tous
-les résultats du C à ces empreintes, vérifient les chemins Unicode, le stockage
-XOR, les entrées vides, les archives malformées et le refus d'écraser une
-destination existante. Les jeux de tests du petit index ont été produits par
-le compresseur original, également présent dans `freestyle.exe`.
+The SHA-256 hashes of the 161 reference files come from the original x86
+routine, run under emulation for analysis. The tests compare all C outputs
+against these hashes and check Unicode paths, XOR storage, empty entries,
+malformed archives, and refusal to overwrite an existing destination.
+The small index test fixtures were produced by the original compressor,
+which is also present in `freestyle.exe`.
 
-Voir [la documentation du format](documentation/klx-format.md) et
-[le manifeste de référence](documentation/freestyle-manifest.json).
+See the [format documentation](documentation/klx-format.md) and
+the [reference manifest](documentation/freestyle-manifest.json).

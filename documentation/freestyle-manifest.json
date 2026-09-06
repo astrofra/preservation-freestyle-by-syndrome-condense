@@ -1,0 +1,1456 @@
+{
+  "archive_sha256": "fa51526c849ffcedb9712469fbbbaa8d62a2397f9f48d8b1d1cbceb832a4e0d2",
+  "original_exe_sha256": "7c28c0cfca3016dac73a17d1fcfe9ded7b8b73803055e78ffe9e313874f2447f",
+  "verification": "Original x86 decoder emulated with Unicorn; Python output matches byte for byte.",
+  "entries": [
+    {
+      "original_path": "D:\\FreeStyle\\Zorg_Plane.lwo",
+      "path": "D/FreeStyle/Zorg_Plane.lwo",
+      "size": 260,
+      "stored_size": 191,
+      "offset": 2336,
+      "method": "lzari",
+      "sha256": "a1e675538ad2745abdc20a29f76c5e32baa1d7968180cd32a7102219fbdfa45c"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\0_sceneTunnelAnim.moa",
+      "path": "D/FreeStyle/0_sceneTunnelAnim.moa",
+      "size": 3906,
+      "stored_size": 1309,
+      "offset": 2527,
+      "method": "lzari",
+      "sha256": "875c66cbc91c65059a84d17e80985bf8929132b79479509f983b98973d6b1ef6"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\1_ZomBie.lws",
+      "path": "D/FreeStyle/1_ZomBie.lws",
+      "size": 26407,
+      "stored_size": 5664,
+      "offset": 3836,
+      "method": "lzari",
+      "sha256": "6a0e954700a0f84a047ec0fb9757cf91a2ec47b6166c8054bc2e21b67948e97f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\1_ZomBie.moa",
+      "path": "D/FreeStyle/1_ZomBie.moa",
+      "size": 12114,
+      "stored_size": 4281,
+      "offset": 9500,
+      "method": "lzari",
+      "sha256": "1d22a240f425bebfe7d6acd7d04f074be4ef200999c869d7dbd21e9633dae097"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\2_LogoFREESTYLE.lws",
+      "path": "D/FreeStyle/2_LogoFREESTYLE.lws",
+      "size": 1555,
+      "stored_size": 791,
+      "offset": 13781,
+      "method": "lzari",
+      "sha256": "f3f8d4c62b19dff54a2278cf6bc19446289d6ae84d900a63badfbb31bba4a699"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\3_Colline.lws",
+      "path": "D/FreeStyle/3_Colline.lws",
+      "size": 16747,
+      "stored_size": 3239,
+      "offset": 14572,
+      "method": "lzari",
+      "sha256": "6ac3d8672c117afa21d9120e56403746fbeee3d580ba9c61ac920dd70237c211"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\3_Colline.moa",
+      "path": "D/FreeStyle/3_Colline.moa",
+      "size": 30584,
+      "stored_size": 5755,
+      "offset": 17811,
+      "method": "lzari",
+      "sha256": "b17143d94e5720a4d7cab6fbe4ed2d93f4a7aa02114711102fb8f8136af14b30"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\4_SceneChampi.lws",
+      "path": "D/FreeStyle/4_SceneChampi.lws",
+      "size": 192472,
+      "stored_size": 17389,
+      "offset": 23566,
+      "method": "lzari",
+      "sha256": "5d4798cb6e0e5f48f84d7e8bbcc0b69b230fa39083025848807db759ad6de8e8"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\4_SceneChampi.moa",
+      "path": "D/FreeStyle/4_SceneChampi.moa",
+      "size": 53834,
+      "stored_size": 23884,
+      "offset": 40955,
+      "method": "lzari",
+      "sha256": "894cfb1dae6d78c852f965a3a296144c2df00ad86291376cc02cf737597589fa"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\5_ChampiGIRLgfx.lws",
+      "path": "D/FreeStyle/5_ChampiGIRLgfx.lws",
+      "size": 1816,
+      "stored_size": 810,
+      "offset": 64839,
+      "method": "lzari",
+      "sha256": "7ba16a7a4b4d6915ba5c4050f1d901fd2359e1b9b74f89c189bc80507b2d214b"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\55_ToTheManor.lws",
+      "path": "D/FreeStyle/55_ToTheManor.lws",
+      "size": 19720,
+      "stored_size": 4041,
+      "offset": 65649,
+      "method": "lzari",
+      "sha256": "8083c9db0ce5ba3418c4227f7530ded0b2f06b3dfa422df9193e845454180125"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\55_ToTheManor.moa",
+      "path": "D/FreeStyle/55_ToTheManor.moa",
+      "size": 19646,
+      "stored_size": 5698,
+      "offset": 69690,
+      "method": "lzari",
+      "sha256": "06ed34fad34283cdf3219c9933e1966a70a55354a70d3d1ea95964a06394f15c"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\6_HOUSEofTHEkitCH.lws",
+      "path": "D/FreeStyle/6_HOUSEofTHEkitCH.lws",
+      "size": 31398,
+      "stored_size": 6907,
+      "offset": 75388,
+      "method": "lzari",
+      "sha256": "2e1508d4f8047cf8c709ef482a213dcefbcefc7d54ddd0d22ad42877827ca31d"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\6_HOUSEofTHEkitCH.moa",
+      "path": "D/FreeStyle/6_HOUSEofTHEkitCH.moa",
+      "size": 28512,
+      "stored_size": 10215,
+      "offset": 82295,
+      "method": "lzari",
+      "sha256": "320797a1ce2d8a13379d1bb0c084b84dbe91ea81c69ca0baccb3e003f27019f0"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\7_TheTRAP!.lws",
+      "path": "D/FreeStyle/7_TheTRAP!.lws",
+      "size": 18383,
+      "stored_size": 4069,
+      "offset": 92510,
+      "method": "lzari",
+      "sha256": "38a724b795b305d2dc81c59069b455e8315d6d4f0894d9ee4b5e77c7dbce05c3"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\7_TheTRAP!.moa",
+      "path": "D/FreeStyle/7_TheTRAP!.moa",
+      "size": 14210,
+      "stored_size": 4266,
+      "offset": 96579,
+      "method": "lzari",
+      "sha256": "76cf0452428e3ce85c6536bddc1ab001d97a56d069626c6806d9779be372ed9f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\8_Wgon.lws",
+      "path": "D/FreeStyle/8_Wgon.lws",
+      "size": 13328,
+      "stored_size": 2877,
+      "offset": 100845,
+      "method": "lzari",
+      "sha256": "a81ecb3c9427009df8a9da7da53241fc71250289527e5a03835a2e310d5fe927"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\8_Wgon.moa",
+      "path": "D/FreeStyle/8_Wgon.moa",
+      "size": 16820,
+      "stored_size": 5877,
+      "offset": 103722,
+      "method": "lzari",
+      "sha256": "90bdf9c96742ff1cab2b8f3777c64b69effcd071a73b131fccf0fae76fb7430b"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\9_SyndromeFINAL.lws",
+      "path": "D/FreeStyle/9_SyndromeFINAL.lws",
+      "size": 1596,
+      "stored_size": 808,
+      "offset": 109599,
+      "method": "lzari",
+      "sha256": "cd02c189cf77e4d2c84834f2023da31dc8c5a3d7c352bf9d4703e5642b6b40d7"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Acet1.jpg",
+      "path": "D/FreeStyle/Acet1.jpg",
+      "size": 47371,
+      "stored_size": 44557,
+      "offset": 110407,
+      "method": "lzari",
+      "sha256": "84646069f10e29c262c4d1d14c1f7dcda711bef3c1bcffbc90240edc040b3e3c"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Amethyst.jpg",
+      "path": "D/FreeStyle/Amethyst.jpg",
+      "size": 8412,
+      "stored_size": 8392,
+      "offset": 154964,
+      "method": "lzari",
+      "sha256": "a9306c683f64e091ac6bd9c6062feb1e098988ea783aa1dc8dfe3fcfa71c16f9"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\atmosphere.lwo",
+      "path": "D/FreeStyle/atmosphere.lwo",
+      "size": 3570,
+      "stored_size": 1858,
+      "offset": 163356,
+      "method": "lzari",
+      "sha256": "2cf5fa2180e364569b9ebd7f5a0cb509dfd68a245a5142b5a699dae14557dd3b"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\BgWagonTrip.lwo",
+      "path": "D/FreeStyle/BgWagonTrip.lwo",
+      "size": 382,
+      "stored_size": 256,
+      "offset": 165214,
+      "method": "lzari",
+      "sha256": "8be1999618d2878d18dd90dd517765dde6920a81f25fdeeb592e2280950d104e"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\BLACK-Fader.lwo",
+      "path": "D/FreeStyle/BLACK-Fader.lwo",
+      "size": 164,
+      "stored_size": 110,
+      "offset": 165470,
+      "method": "lzari",
+      "sha256": "71f7ac41f5f2bab958a626211c48ab0d7868eb659790b447b4d2cc8a16e8a790"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\bou1.jpg",
+      "path": "D/FreeStyle/bou1.jpg",
+      "size": 10914,
+      "stored_size": 10595,
+      "offset": 165580,
+      "method": "lzari",
+      "sha256": "732b5de8fdafa9e09d35b678e6f3f6b780c06c149bdaf1d5884743665211047f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\bou2.jpg",
+      "path": "D/FreeStyle/bou2.jpg",
+      "size": 8906,
+      "stored_size": 8536,
+      "offset": 176175,
+      "method": "lzari",
+      "sha256": "2660171f3631ce0be0cea9dbe3d4ef2eb091845a41b23e9165dc5f82432a7325"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiAtmos.jpg",
+      "path": "D/FreeStyle/ChampiAtmos.jpg",
+      "size": 1794,
+      "stored_size": 1702,
+      "offset": 184711,
+      "method": "lzari",
+      "sha256": "72cbbccda5c3eadd83a2d77b5170f0274c4460e02405632d99b498598ca621cf"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiBotom.jpg",
+      "path": "D/FreeStyle/ChampiBotom.jpg",
+      "size": 879,
+      "stored_size": 805,
+      "offset": 186413,
+      "method": "lzari",
+      "sha256": "d99c4cfed0f1770bf0f62a0e8dbfc91955897a61003d714d3f76b0c8360208f6"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiCiel.jpg",
+      "path": "D/FreeStyle/ChampiCiel.jpg",
+      "size": 9966,
+      "stored_size": 8836,
+      "offset": 187218,
+      "method": "lzari",
+      "sha256": "4526757398cec4e9bc4d465bf883aa031414daa23013f5bc587f0b82c8142d22"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiCiel.lwo",
+      "path": "D/FreeStyle/ChampiCiel.lwo",
+      "size": 3556,
+      "stored_size": 1853,
+      "offset": 196054,
+      "method": "lzari",
+      "sha256": "b7f450b8874e82de89f7c041bafc36b04dda0e4ea45724c290d4eba3e655eefa"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiGirl2D.jpg",
+      "path": "D/FreeStyle/ChampiGirl2D.jpg",
+      "size": 54461,
+      "stored_size": 53171,
+      "offset": 197907,
+      "method": "lzari",
+      "sha256": "d733364ccba30da7053a6f13136b7a4530e4a7ed6cdd3194aabc1e56ea5dd861"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Champignon.lwo",
+      "path": "D/FreeStyle/Champignon.lwo",
+      "size": 3178,
+      "stored_size": 2247,
+      "offset": 251078,
+      "method": "lzari",
+      "sha256": "f270473077f8d67ee1ad4358246789ca992767230e1e601e1a6719837ebd2f80"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiLand.jpg",
+      "path": "D/FreeStyle/ChampiLand.jpg",
+      "size": 4210,
+      "stored_size": 3929,
+      "offset": 253325,
+      "method": "lzari",
+      "sha256": "84fe84b14bc38d194b54bea09416ec165672bab17d9a6c990b69a66028dea310"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Champiland.lwo",
+      "path": "D/FreeStyle/Champiland.lwo",
+      "size": 2932,
+      "stored_size": 1560,
+      "offset": 257254,
+      "method": "lzari",
+      "sha256": "72eb17baaeb10b0199e31cada6a5884e130c9c5fe24864857448e8f16be89180"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiLand256.jpg",
+      "path": "D/FreeStyle/ChampiLand256.jpg",
+      "size": 19523,
+      "stored_size": 19413,
+      "offset": 258814,
+      "method": "lzari",
+      "sha256": "a565d244af545d10475ba5feba81488bc317df5962e9918a1e3a250ce40f8204"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiTop.jpg",
+      "path": "D/FreeStyle/ChampiTop.jpg",
+      "size": 728,
+      "stored_size": 648,
+      "offset": 278227,
+      "method": "lzari",
+      "sha256": "8e817814d4ac9174320ac92d6621a5146e1b223ffd42e82257a0f5488b2dfbe3"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ChampiTronc.jpg",
+      "path": "D/FreeStyle/ChampiTronc.jpg",
+      "size": 529,
+      "stored_size": 431,
+      "offset": 278875,
+      "method": "lzari",
+      "sha256": "957874bde1a753ef77f6ddff79a7a2b0771e0ff61eae5ba18c515c66c97dcdb5"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\chromball.jpg",
+      "path": "D/FreeStyle/chromball.jpg",
+      "size": 15130,
+      "stored_size": 15130,
+      "offset": 279306,
+      "method": "xor-9a",
+      "sha256": "6a0bffc33d7841de0ac496e390600352722a1b9df8f8ac8a3dca1f18c29396e4"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\CielColline.lwo",
+      "path": "D/FreeStyle/CielColline.lwo",
+      "size": 3586,
+      "stored_size": 1870,
+      "offset": 294436,
+      "method": "lzari",
+      "sha256": "83286a835a472f0029c0008e63133ff249f7e71957a8ba80234527e8093d38d2"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Colline.lwo",
+      "path": "D/FreeStyle/Colline.lwo",
+      "size": 3422,
+      "stored_size": 2778,
+      "offset": 296306,
+      "method": "lzari",
+      "sha256": "b8d413a8bd9e3fa173b580b8fe54842889c52058fc092ef3596f6586222faa88"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Colline.moa",
+      "path": "D/FreeStyle/Colline.moa",
+      "size": 32372,
+      "stored_size": 5716,
+      "offset": 299084,
+      "method": "lzari",
+      "sha256": "a9b14a6272e3721db881fd8c0e9b9eac22f48b93b2a4c15d7d18970ebb3af826"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Colline_2.jpg",
+      "path": "D/FreeStyle/Colline_2.jpg",
+      "size": 12189,
+      "stored_size": 12162,
+      "offset": 304800,
+      "method": "lzari",
+      "sha256": "36df39a68fb18f6fd8bd99a76107e0573bfb7aeae2137e97ea436bc2380a7d64"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\condenselogo.jpg",
+      "path": "D/FreeStyle/condenselogo.jpg",
+      "size": 45864,
+      "stored_size": 45598,
+      "offset": 316962,
+      "method": "lzari",
+      "sha256": "4df165e9384e62339571d88c3c61638c0056a00617315f05f11b6dcb8d950dce"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\CotéWagon.jpg",
+      "path": "D/FreeStyle/CotéWagon.jpg",
+      "size": 4877,
+      "stored_size": 4849,
+      "offset": 362560,
+      "method": "lzari",
+      "sha256": "2ef364ff75a88c6ee9dd76d168ed6a3fe6668105d8d8b66f342a65e7e03517ac"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\CREDITPLANE_Acet1.lwo",
+      "path": "D/FreeStyle/CREDITPLANE_Acet1.lwo",
+      "size": 256,
+      "stored_size": 186,
+      "offset": 367409,
+      "method": "lzari",
+      "sha256": "b3855e7cec858697429b743143957ecc777067ae541128bb7b2f60c188ad5bfc"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\CREDITPLANE_Gozer.lwo",
+      "path": "D/FreeStyle/CREDITPLANE_Gozer.lwo",
+      "size": 252,
+      "stored_size": 184,
+      "offset": 367595,
+      "method": "lzari",
+      "sha256": "067591f5abc0548ed4646b6cbe300fee845bde1c30c38a0b7b9a1c7f87169cc7"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\CREDITPLANE_Jibe.lwo",
+      "path": "D/FreeStyle/CREDITPLANE_Jibe.lwo",
+      "size": 250,
+      "stored_size": 183,
+      "offset": 367779,
+      "method": "lzari",
+      "sha256": "9b07871d1feb10059fad7b258cacfabfcb9e2313db365445a84767f543f65447"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\CREDITPLANE_nRs.lwo",
+      "path": "D/FreeStyle/CREDITPLANE_nRs.lwo",
+      "size": 292,
+      "stored_size": 204,
+      "offset": 367962,
+      "method": "lzari",
+      "sha256": "4deeabc81674648ba261f9fd80a07a53f6869f51ab820d2a9178295083fc3420"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\CREDITPLANE_Traven.lwo",
+      "path": "D/FreeStyle/CREDITPLANE_Traven.lwo",
+      "size": 256,
+      "stored_size": 188,
+      "offset": 368166,
+      "method": "lzari",
+      "sha256": "5d308e3bf302d7eefbf14cdce671ecf1b68779698ecd03a27846509b086070f0"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\CREDITPLANE_xBaRr.lwo",
+      "path": "D/FreeStyle/CREDITPLANE_xBaRr.lwo",
+      "size": 252,
+      "stored_size": 186,
+      "offset": 368354,
+      "method": "lzari",
+      "sha256": "24ecc4a9818f690b9204f6ab5dc65313409c6467b0b05c2d32da1768dc30ab75"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\derrierepanneau.jpg",
+      "path": "D/FreeStyle/derrierepanneau.jpg",
+      "size": 3823,
+      "stored_size": 3750,
+      "offset": 368540,
+      "method": "lzari",
+      "sha256": "ca13942ce24a1cf61203091451e43cf71960321627c0ee6a7d78e8d5af905bd1"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Droitezarb2.lwo",
+      "path": "D/FreeStyle/Droitezarb2.lwo",
+      "size": 2036,
+      "stored_size": 1053,
+      "offset": 372290,
+      "method": "lzari",
+      "sha256": "448f5aee5eaf93ca3788b81f73293db38782e4cbbd0f3622dd99ec7c7d117e53"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Droitezarbeffect.lwo",
+      "path": "D/FreeStyle/Droitezarbeffect.lwo",
+      "size": 630,
+      "stored_size": 389,
+      "offset": 373343,
+      "method": "lzari",
+      "sha256": "962844dc4fa59e96671e54ba85f1466f195bf8f8307ea91caa216d4ecd7ac132"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\EdT-Shirt !.jpg",
+      "path": "D/FreeStyle/EdT-Shirt !.jpg",
+      "size": 1620,
+      "stored_size": 1568,
+      "offset": 373732,
+      "method": "lzari",
+      "sha256": "7c16abb4858e51e4bfe96dd580b4c0045d1cb00dbe1de9472412e728b6641e9c"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Edward-BrasDroi.lwo",
+      "path": "D/FreeStyle/Edward-BrasDroi.lwo",
+      "size": 1400,
+      "stored_size": 1105,
+      "offset": 375300,
+      "method": "lzari",
+      "sha256": "5ba4d967a7eaae2f0c670d40f52d0bdd56b247fae267f51fd1f62fdb72bc1992"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Edward-BrasGauche.lwo",
+      "path": "D/FreeStyle/Edward-BrasGauche.lwo",
+      "size": 1400,
+      "stored_size": 1100,
+      "offset": 376405,
+      "method": "lzari",
+      "sha256": "f955accc8ff746ed7f8529016426872a93781a47dc4a0875c7b33f1b9068e4ad"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Edward-CORP.lwo",
+      "path": "D/FreeStyle/Edward-CORP.lwo",
+      "size": 432,
+      "stored_size": 326,
+      "offset": 377505,
+      "method": "lzari",
+      "sha256": "93ed125c86f838e8cd86f2d3ba084c4e42a5ab5050d812b5e0ecf71e1f4222d6"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\EdwardEvmap.jpg",
+      "path": "D/FreeStyle/EdwardEvmap.jpg",
+      "size": 1149,
+      "stored_size": 1080,
+      "offset": 377831,
+      "method": "lzari",
+      "sha256": "bc4dae013695069fd074ea0149c5ff57822c32be4c5405ead58f218b198f48ad"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Edward-TETE.lwo",
+      "path": "D/FreeStyle/Edward-TETE.lwo",
+      "size": 5154,
+      "stored_size": 3359,
+      "offset": 378911,
+      "method": "lzari",
+      "sha256": "91a65351b809e4a89fbb12a250f0417a0297606062ccaef286798a5176e5c3f6"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Emit_[SPARK_0].lwo",
+      "path": "D/FreeStyle/Emit_[SPARK_0].lwo",
+      "size": 296,
+      "stored_size": 218,
+      "offset": 382270,
+      "method": "lzari",
+      "sha256": "4c582d2b2ba6a34e10a68ba1aa80059b6d022af7f9debac8804aae0bd8c974ba"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\entree.jpg",
+      "path": "D/FreeStyle/entree.jpg",
+      "size": 4612,
+      "stored_size": 4554,
+      "offset": 382488,
+      "method": "lzari",
+      "sha256": "28fdac3eb540b9140f1b414509f07aebc404b3ca17dae976e0c05fe1aebc03f2"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\EntréeGrenier.jpg",
+      "path": "D/FreeStyle/EntréeGrenier.jpg",
+      "size": 4294,
+      "stored_size": 4264,
+      "offset": 387042,
+      "method": "lzari",
+      "sha256": "855d4801de9eba029728e945a4bbc916a2c7168806f296e926a3b7e8f180e66b"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\EscalCote.jpg",
+      "path": "D/FreeStyle/EscalCote.jpg",
+      "size": 4887,
+      "stored_size": 4638,
+      "offset": 391306,
+      "method": "lzari",
+      "sha256": "e1e66b2c275be84230e0a65d573c99940e4817c1cf43fbd7a202e706e90226b4"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Escalier.jpg",
+      "path": "D/FreeStyle/Escalier.jpg",
+      "size": 6660,
+      "stored_size": 6648,
+      "offset": 395944,
+      "method": "lzari",
+      "sha256": "15ee5886e5963e31df76b5c86b6e5c35397cfc67a0691b2402270a79b5482d3f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\FaceWagon.jpg",
+      "path": "D/FreeStyle/FaceWagon.jpg",
+      "size": 3058,
+      "stored_size": 3033,
+      "offset": 402592,
+      "method": "lzari",
+      "sha256": "13b64f20b85d43af4a3cb1a5ba461e95731da4089673ae1f9eb1b2af5bfb50c7"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\fantome !.jpg",
+      "path": "D/FreeStyle/fantome !.jpg",
+      "size": 9149,
+      "stored_size": 9040,
+      "offset": 405625,
+      "method": "lzari",
+      "sha256": "7928b2fc335708bbb169fd2e277bf691518715ac5bb3d9b0550563bc6c11ad7d"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\FondHouse.jpg",
+      "path": "D/FreeStyle/FondHouse.jpg",
+      "size": 3478,
+      "stored_size": 3400,
+      "offset": 414665,
+      "method": "lzari",
+      "sha256": "bf9a2a663c58f6ca308cebbc15c61b674a618e7581c1e582b3b10ad31c24de67"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Franken-BrasDroit.lwo",
+      "path": "D/FreeStyle/Franken-BrasDroit.lwo",
+      "size": 1320,
+      "stored_size": 1029,
+      "offset": 418065,
+      "method": "lzari",
+      "sha256": "026fdd03e4431ed6a27a3d86a58b800960512e672067a934f16d656be90d1629"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Franken-BrasGauche.lwo",
+      "path": "D/FreeStyle/Franken-BrasGauche.lwo",
+      "size": 1320,
+      "stored_size": 1015,
+      "offset": 419094,
+      "method": "lzari",
+      "sha256": "9bf01e6b27c701ec1fd1b76f2cab6e161862dc85a06b279fe855152b241eebac"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Franken-CORP.lwo",
+      "path": "D/FreeStyle/Franken-CORP.lwo",
+      "size": 276,
+      "stored_size": 195,
+      "offset": 420109,
+      "method": "lzari",
+      "sha256": "9acc1cddac67e229a8d3a6ee2ec937b28a13c86b6402441606770a62bb18eec6"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Franken-TETE.lwo",
+      "path": "D/FreeStyle/Franken-TETE.lwo",
+      "size": 5018,
+      "stored_size": 3652,
+      "offset": 420304,
+      "method": "lzari",
+      "sha256": "bcb354ca959d40c092ae66d2058b16a58ebae8b0a000b546bd1f9228374ab204"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\FreeStylePlane.lwo",
+      "path": "D/FreeStyle/FreeStylePlane.lwo",
+      "size": 168,
+      "stored_size": 115,
+      "offset": 423956,
+      "method": "lzari",
+      "sha256": "557be3bbf3c2e1240fd4cedf91e15408b450e90c83be4ddc345c5caf628ed10f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GIRL-avantBrasDroit.lwo",
+      "path": "D/FreeStyle/GIRL-avantBrasDroit.lwo",
+      "size": 452,
+      "stored_size": 275,
+      "offset": 424071,
+      "method": "lzari",
+      "sha256": "87526425280ba0190e3b61705a7206580ba95765f3f0b38798dbb9dd11918af2"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GIRL-avantBrasGauche.lwo",
+      "path": "D/FreeStyle/GIRL-avantBrasGauche.lwo",
+      "size": 452,
+      "stored_size": 262,
+      "offset": 424346,
+      "method": "lzari",
+      "sha256": "590d8915f6e2cece81f936ac784687a5fe56dbdd437a79c2f85ae2ae54fe7150"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GIRL-BrasDroit.lwo",
+      "path": "D/FreeStyle/GIRL-BrasDroit.lwo",
+      "size": 260,
+      "stored_size": 177,
+      "offset": 424608,
+      "method": "lzari",
+      "sha256": "afc059feccb9769aa258fe0670ab8b87725e4013295e764ce349fb0ab0167a71"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GIRL-BrasGauche.lwo",
+      "path": "D/FreeStyle/GIRL-BrasGauche.lwo",
+      "size": 260,
+      "stored_size": 175,
+      "offset": 424785,
+      "method": "lzari",
+      "sha256": "80d55390e22d6fea55034af30836b0e2ab7ff3ad3f1221be480adbf93486b2a5"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GirlCorps.jpg",
+      "path": "D/FreeStyle/GirlCorps.jpg",
+      "size": 1218,
+      "stored_size": 1159,
+      "offset": 424960,
+      "method": "lzari",
+      "sha256": "0913a4777c51bd037de27477bbd049c670b7c493a4687ef20dc352bfef8d5347"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GIRL-corpsPART.lwo",
+      "path": "D/FreeStyle/GIRL-corpsPART.lwo",
+      "size": 392,
+      "stored_size": 295,
+      "offset": 426119,
+      "method": "lzari",
+      "sha256": "84eefda93a7c72a3a628a258c03eecd5d883137781fcd23944a081b603a34355"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GIRL-jambedroite.lwo",
+      "path": "D/FreeStyle/GIRL-jambedroite.lwo",
+      "size": 424,
+      "stored_size": 283,
+      "offset": 426414,
+      "method": "lzari",
+      "sha256": "137017b00796d97199fe49b44e367ce335e634105312c03041222191d7e052a0"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GIRL-jambegauche.lwo",
+      "path": "D/FreeStyle/GIRL-jambegauche.lwo",
+      "size": 424,
+      "stored_size": 285,
+      "offset": 426697,
+      "method": "lzari",
+      "sha256": "d33e8a034e83bd91a27c14e676ee2883e619cc4a49195e1d217b0da8fb6faff1"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GIRL-tete.lwo",
+      "path": "D/FreeStyle/GIRL-tete.lwo",
+      "size": 5748,
+      "stored_size": 3429,
+      "offset": 426982,
+      "method": "lzari",
+      "sha256": "705bcfc82af17b47c22e6f91957c034e830870501667a9d9693d37e102c190c6"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Gozer.jpg",
+      "path": "D/FreeStyle/Gozer.jpg",
+      "size": 6867,
+      "stored_size": 6627,
+      "offset": 430411,
+      "method": "lzari",
+      "sha256": "bb7a3ab2031d2d1dd6f754d85fe23b37b7503ccce49d4a6b275bb184c5cdc2e3"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Grenier.lwo",
+      "path": "D/FreeStyle/Grenier.lwo",
+      "size": 1948,
+      "stored_size": 765,
+      "offset": 437038,
+      "method": "lzari",
+      "sha256": "9c2233334e466630332b8b76fe05f1a306efeb88839e4297ae0f8bf607170942"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\GrenierSOl.jpg",
+      "path": "D/FreeStyle/GrenierSOl.jpg",
+      "size": 7199,
+      "stored_size": 7192,
+      "offset": 437803,
+      "method": "lzari",
+      "sha256": "c07563e2603b10ae154fff696b1a263d2cffe02c58d3ae25212c9db015b68803"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\griffe.jpg",
+      "path": "D/FreeStyle/griffe.jpg",
+      "size": 666,
+      "stored_size": 587,
+      "offset": 444995,
+      "method": "lzari",
+      "sha256": "81f34b5d48f229c8a131e2fe75fa5579ad70fea49efb16444e1f32e71e1a2a46"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\HHouseEvmap.jpg",
+      "path": "D/FreeStyle/HHouseEvmap.jpg",
+      "size": 1166,
+      "stored_size": 1098,
+      "offset": 445582,
+      "method": "lzari",
+      "sha256": "d97a405acc6b338189b7199019b971e948119033196a9ebfeb0f9453b5a906ba"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\HOUSEofTHEkitCH.moa",
+      "path": "D/FreeStyle/HOUSEofTHEkitCH.moa",
+      "size": 27168,
+      "stored_size": 10171,
+      "offset": 446680,
+      "method": "lzari",
+      "sha256": "f5531a4a91054ab4163c83ae9cbb71580b35d6603c23bcdf9aad12ddb952f54d"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Jibe.jpg",
+      "path": "D/FreeStyle/Jibe.jpg",
+      "size": 8559,
+      "stored_size": 8454,
+      "offset": 456851,
+      "method": "lzari",
+      "sha256": "a1f69f1118e47aa5a446d3485c076db634039cfa3561860d5f8f632de2821c03"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar - Arriére.jpg",
+      "path": "D/FreeStyle/KitchCar - Arriére.jpg",
+      "size": 4875,
+      "stored_size": 4832,
+      "offset": 465305,
+      "method": "lzari",
+      "sha256": "e2cf10dd304d8b278a4abf16f09121946187dc3c30c62f6b4b7ccf08bc873f13"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar - CaisseFER_Left.jpg",
+      "path": "D/FreeStyle/KitchCar - CaisseFER_Left.jpg",
+      "size": 1868,
+      "stored_size": 1801,
+      "offset": 470137,
+      "method": "lzari",
+      "sha256": "9778ff60661ed26719cea469e079bf1bea38db16dc179aff1e168e4fc35ad5f8"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar - CaisseFER_Right.jpg",
+      "path": "D/FreeStyle/KitchCar - CaisseFER_Right.jpg",
+      "size": 1865,
+      "stored_size": 1795,
+      "offset": 471938,
+      "method": "lzari",
+      "sha256": "f800b2fab51de6438a2a1b07d0f6357a2cc85529b4d63cfe4b7fd93f977377b5"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar - Immatriculation.jpg",
+      "path": "D/FreeStyle/KitchCar - Immatriculation.jpg",
+      "size": 3590,
+      "stored_size": 3558,
+      "offset": 473733,
+      "method": "lzari",
+      "sha256": "51ac2dac262b8c7c1703b4124abc611bfa2cd4c0634d374ed7261b034b57af91"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar - Pare-Boue_Arriere.jpg",
+      "path": "D/FreeStyle/KitchCar - Pare-Boue_Arriere.jpg",
+      "size": 2348,
+      "stored_size": 2173,
+      "offset": 477291,
+      "method": "lzari",
+      "sha256": "a3186c451186021462c0bb91dd9d4e3f2cf1d1f179290cbedf28dc2f9283cbfb"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar - Portiére.jpg",
+      "path": "D/FreeStyle/KitchCar - Portiére.jpg",
+      "size": 3681,
+      "stored_size": 3620,
+      "offset": 479464,
+      "method": "lzari",
+      "sha256": "d318018c39e715a782524196f4ea92414b134d2b2084131626963e8fd4743bc5"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar- Roue.jpg",
+      "path": "D/FreeStyle/KitchCar- Roue.jpg",
+      "size": 4012,
+      "stored_size": 3934,
+      "offset": 483084,
+      "method": "lzari",
+      "sha256": "8e6a72aa4b4dc11442484e7663a63ca3647592d0435df8b0831dfc8c2266931a"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar -SpotPhare.jpg",
+      "path": "D/FreeStyle/KitchCar -SpotPhare.jpg",
+      "size": 737,
+      "stored_size": 657,
+      "offset": 487018,
+      "method": "lzari",
+      "sha256": "885c06750e76a6b06bf24367461607824f4825b904747658d8029b11820cd33f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar-Body.lwo",
+      "path": "D/FreeStyle/KitchCar-Body.lwo",
+      "size": 7250,
+      "stored_size": 3880,
+      "offset": 487675,
+      "method": "lzari",
+      "sha256": "4479ce0f447b2b32782f4832a84bd3492c15586f5a466d6354df09bc51064f3c"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar-Moteur.jpg",
+      "path": "D/FreeStyle/KitchCar-Moteur.jpg",
+      "size": 888,
+      "stored_size": 807,
+      "offset": 491555,
+      "method": "lzari",
+      "sha256": "d0f383cc91eb22b1f1bc6d4eca08893d91a14daf93fcc27e229ca2a5c0bcb4cc"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar-Portiére.lwo",
+      "path": "D/FreeStyle/KitchCar-Portiére.lwo",
+      "size": 324,
+      "stored_size": 257,
+      "offset": 492362,
+      "method": "lzari",
+      "sha256": "2ac3d8c8012ee75a1f2c1125a3c50d93dda7f955c610071317102da57f9bbe14"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar-PortiéreG.lwo",
+      "path": "D/FreeStyle/KitchCar-PortiéreG.lwo",
+      "size": 312,
+      "stored_size": 250,
+      "offset": 492619,
+      "method": "lzari",
+      "sha256": "ca0856b4b50e8d59accf13b76f6e77c73feac872d68d09bd875d40351c370661"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar-Roue.lwo",
+      "path": "D/FreeStyle/KitchCar-Roue.lwo",
+      "size": 1302,
+      "stored_size": 745,
+      "offset": 492869,
+      "method": "lzari",
+      "sha256": "568b86950baa58c7b534cbfbeb301082a2f68af0b9f4f8144caf7428d3db10ce"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCarVentilo.jpg",
+      "path": "D/FreeStyle/KitchCarVentilo.jpg",
+      "size": 1317,
+      "stored_size": 1263,
+      "offset": 493614,
+      "method": "lzari",
+      "sha256": "3bee4970c1fbb91494025bc5c4efc6f34c89295f2ed42dd65fd7a3092ed98138"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\KitchCar-Volumik.lwo",
+      "path": "D/FreeStyle/KitchCar-Volumik.lwo",
+      "size": 1108,
+      "stored_size": 778,
+      "offset": 494877,
+      "method": "lzari",
+      "sha256": "74dd8b8f0105f4b25ceed156487562dc74f2b1d3743046cc30fbaa078ded7774"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\LandScape.lwo",
+      "path": "D/FreeStyle/LandScape.lwo",
+      "size": 3700,
+      "stored_size": 2352,
+      "offset": 495655,
+      "method": "lzari",
+      "sha256": "5a5f0fd78bcc19ebf0f122a5e32ea3d5a3eaee97eb69ca7a094be01442118470"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\logoFREESTYLE.jpg",
+      "path": "D/FreeStyle/logoFREESTYLE.jpg",
+      "size": 29795,
+      "stored_size": 28849,
+      "offset": 498007,
+      "method": "lzari",
+      "sha256": "5023b9adb86adeda39a5d5f15defd248aab035499e8d05591e6bf30ca69b8272"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\logoplan.lwo",
+      "path": "D/FreeStyle/logoplan.lwo",
+      "size": 292,
+      "stored_size": 226,
+      "offset": 526856,
+      "method": "lzari",
+      "sha256": "13dec5d3130d6df6c23c9b2d9b48748517a48808d6577c263cf6bfe4fe09c789"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\logoSYNDROME.jpg",
+      "path": "D/FreeStyle/logoSYNDROME.jpg",
+      "size": 44657,
+      "stored_size": 42587,
+      "offset": 527082,
+      "method": "lzari",
+      "sha256": "4adb9036953972de4c6f89ca4019d4d0d4d9e6c019570aecfcf07b2d0fc1b9df"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\MaisonHantée.lwo",
+      "path": "D/FreeStyle/MaisonHantée.lwo",
+      "size": 36768,
+      "stored_size": 23605,
+      "offset": 569669,
+      "method": "lzari",
+      "sha256": "eb6d96e63707cf630d7467d261c63b8c2908d0175cce6770cfe805a981e1ff45"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\MaisonNoir.lwo",
+      "path": "D/FreeStyle/MaisonNoir.lwo",
+      "size": 1894,
+      "stored_size": 1088,
+      "offset": 593274,
+      "method": "lzari",
+      "sha256": "56880d8e2b1d5fab6466619355bb3b969a4cfcafb3896824c51e8ada7ffc2a75"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Miette_PLANE.lwo",
+      "path": "D/FreeStyle/Miette_PLANE.lwo",
+      "size": 278,
+      "stored_size": 199,
+      "offset": 594362,
+      "method": "lzari",
+      "sha256": "bccf62b69803c49ea15d5e62af765bc1577c0c7ad016942afa086bdfabc0a606"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\monstro_plane.lwo",
+      "path": "D/FreeStyle/monstro_plane.lwo",
+      "size": 278,
+      "stored_size": 199,
+      "offset": 594561,
+      "method": "lzari",
+      "sha256": "6ba942b448adbfe699df41b69a752b661eeee122b2cff15d35d8b86da94eee85"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\mur1.jpg",
+      "path": "D/FreeStyle/mur1.jpg",
+      "size": 4934,
+      "stored_size": 4750,
+      "offset": 594760,
+      "method": "lzari",
+      "sha256": "c9b13f04fb130dbb21cea34ef08872b0d6bfb6f773f658303b23c48475f5a046"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\MurGrenier.jpg",
+      "path": "D/FreeStyle/MurGrenier.jpg",
+      "size": 2958,
+      "stored_size": 2903,
+      "offset": 599510,
+      "method": "lzari",
+      "sha256": "6e60ad1bbac39992fdf788c5ace599a5770c864fdfc06b9fc449f23b19a8b996"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\MurGrenierFond.jpg",
+      "path": "D/FreeStyle/MurGrenierFond.jpg",
+      "size": 998,
+      "stored_size": 920,
+      "offset": 602413,
+      "method": "lzari",
+      "sha256": "f144a87d976786eea2c1ef6f319b5068697ed7e6632a73e7e8b2b24606198d7b"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\no-recess.jpg",
+      "path": "D/FreeStyle/no-recess.jpg",
+      "size": 9137,
+      "stored_size": 9013,
+      "offset": 603333,
+      "method": "lzari",
+      "sha256": "f9ffc24806938ac8e8d96003340ef651b7d6fadf81cc5b02e1b8e1ba09adab82"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\panneau.jpg",
+      "path": "D/FreeStyle/panneau.jpg",
+      "size": 10381,
+      "stored_size": 10341,
+      "offset": 612346,
+      "method": "lzari",
+      "sha256": "9cda3f66255153c813d05541fe2da4f2a400847eb2de908a44df74cc7559d37a"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\pano2.lwo",
+      "path": "D/FreeStyle/pano2.lwo",
+      "size": 2368,
+      "stored_size": 1404,
+      "offset": 622687,
+      "method": "lzari",
+      "sha256": "4b83bcf9fd8b7bc607419cb07d67a3380472094c6a0e6e394e0f1ac2e5ffc333"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\People1.jpg",
+      "path": "D/FreeStyle/People1.jpg",
+      "size": 10201,
+      "stored_size": 10070,
+      "offset": 624091,
+      "method": "lzari",
+      "sha256": "500b48bbc990daae6e409b2ca60495a8e2ccf5ba1b4e446e7f363992bbeab9d5"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\people1.lwo",
+      "path": "D/FreeStyle/people1.lwo",
+      "size": 258,
+      "stored_size": 186,
+      "offset": 634161,
+      "method": "lzari",
+      "sha256": "ba2ba4a782bc3c7284b47911be4b070a6e641314e7032c8f09dd8b18ed40245d"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\People2.jpg",
+      "path": "D/FreeStyle/People2.jpg",
+      "size": 6825,
+      "stored_size": 6569,
+      "offset": 634347,
+      "method": "lzari",
+      "sha256": "a503155354950c3601b6f4f86cd9157c2024700eb886ded88b2e15cbb127aec6"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\people2.lwo",
+      "path": "D/FreeStyle/people2.lwo",
+      "size": 258,
+      "stored_size": 186,
+      "offset": 640916,
+      "method": "lzari",
+      "sha256": "c9b9f190430eaf28f1f8d0b1cb30bc69a9ca65f74a738b909d8d855f5580022c"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\People3.jpg",
+      "path": "D/FreeStyle/People3.jpg",
+      "size": 8133,
+      "stored_size": 7944,
+      "offset": 641102,
+      "method": "lzari",
+      "sha256": "6bc7af5fa3a08d2a4363d80faa4b0dd0ff4f512c7d356682c6f60e4904b6d108"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\people3.lwo",
+      "path": "D/FreeStyle/people3.lwo",
+      "size": 258,
+      "stored_size": 186,
+      "offset": 649046,
+      "method": "lzari",
+      "sha256": "cb3223d03d49a3e9265802c0e526f79fa2f305ea44a91c2bae8dc7dce8786635"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Phantom_Plane.lwo",
+      "path": "D/FreeStyle/Phantom_Plane.lwo",
+      "size": 272,
+      "stored_size": 191,
+      "offset": 649232,
+      "method": "lzari",
+      "sha256": "a118e5e664ba8ee4276c952d4332709b4ecdfd3f83e533c5c79883d58dc6eeb6"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\PinkBOARD.lwo",
+      "path": "D/FreeStyle/PinkBOARD.lwo",
+      "size": 160,
+      "stored_size": 112,
+      "offset": 649423,
+      "method": "lzari",
+      "sha256": "04f0f756e4e9a6494af47b7d2e5be81cc81400fcf33b143bd335619874a0716a"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\plancher.jpg",
+      "path": "D/FreeStyle/plancher.jpg",
+      "size": 1872,
+      "stored_size": 1822,
+      "offset": 649535,
+      "method": "lzari",
+      "sha256": "61fedde3bfd357a37c77f01d1aed869c6a4ea1c0b0d54d4ee8f4b9ca8c93bc4a"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\PoutreSideGrenier.jpg",
+      "path": "D/FreeStyle/PoutreSideGrenier.jpg",
+      "size": 3017,
+      "stored_size": 2770,
+      "offset": 651357,
+      "method": "lzari",
+      "sha256": "571a5e0061b5aaa4071d3f624a92db725662967aea43b91848318c586882d6b9"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\presented_by_C.jpg",
+      "path": "D/FreeStyle/presented_by_C.jpg",
+      "size": 10663,
+      "stored_size": 9593,
+      "offset": 654127,
+      "method": "lzari",
+      "sha256": "ee4b9eeb7ba4285cd5ac1a541a19ccade46584215f171e075b540dab354562d9"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\PresentedBy.lwo",
+      "path": "D/FreeStyle/PresentedBy.lwo",
+      "size": 276,
+      "stored_size": 195,
+      "offset": 663720,
+      "method": "lzari",
+      "sha256": "6c23fa4d4adcb0f3537cdba94566de37dcf3c52ccc19f52bc57f4261f324e5d7"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\PseudoNULL.lwo",
+      "path": "D/FreeStyle/PseudoNULL.lwo",
+      "size": 32,
+      "stored_size": 32,
+      "offset": 663915,
+      "method": "xor-9a",
+      "sha256": "05289ad3dc9cbb380b85feb7b76e5ba40b046b7b740952db93449983bfd4e5f2"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Rembarde.jpg",
+      "path": "D/FreeStyle/Rembarde.jpg",
+      "size": 3144,
+      "stored_size": 3081,
+      "offset": 663947,
+      "method": "lzari",
+      "sha256": "6656f0320d1ac0963a8161a53e69a434f6e19fa2e6bc74807335cda7341fb9ab"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\RoueWagon.jpg",
+      "path": "D/FreeStyle/RoueWagon.jpg",
+      "size": 8775,
+      "stored_size": 7712,
+      "offset": 667028,
+      "method": "lzari",
+      "sha256": "f18f852a0e1064240f6f0fe8649970a4895ed18c2da80d89450fb819a12fc115"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\script.txt",
+      "path": "D/FreeStyle/script.txt",
+      "size": 837,
+      "stored_size": 508,
+      "offset": 674740,
+      "method": "lzari",
+      "sha256": "304e084ddb2e2b896c172552c918ab09c2c88829ec1f42b84be6c389afb395f0"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\SolHHouse.jpg",
+      "path": "D/FreeStyle/SolHHouse.jpg",
+      "size": 3572,
+      "stored_size": 3509,
+      "offset": 675248,
+      "method": "lzari",
+      "sha256": "3d4ab0749bf34a5f25af672a01f6811c42f708af1e1772b97e083e4625d16caa"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Syndrome-FADER.lwo",
+      "path": "D/FreeStyle/Syndrome-FADER.lwo",
+      "size": 172,
+      "stored_size": 114,
+      "offset": 678757,
+      "method": "lzari",
+      "sha256": "b0d9b347a07c591b23d86fbb6417a0cd6c8dd390bfdc60adc4b62a1248f58071"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TheTRAP!.moa",
+      "path": "D/FreeStyle/TheTRAP!.moa",
+      "size": 13638,
+      "stored_size": 4161,
+      "offset": 678871,
+      "method": "lzari",
+      "sha256": "da41fced0a837e41b20b7617d9332d16cc1e0c9b2fbe6fbb3cf90addbaf084c7"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ToitGrenier.jpg",
+      "path": "D/FreeStyle/ToitGrenier.jpg",
+      "size": 3473,
+      "stored_size": 3396,
+      "offset": 683032,
+      "method": "lzari",
+      "sha256": "957a09097f8540ce939eaff147acbe60a953740956f60a40b8cdac69741246fe"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TrapAktivator.jpg",
+      "path": "D/FreeStyle/TrapAktivator.jpg",
+      "size": 449,
+      "stored_size": 352,
+      "offset": 686428,
+      "method": "lzari",
+      "sha256": "5b514de653aa3bf2454ba6fb20c40b03dac20eb1b4870d8b0edf1c469e00b2a7"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TrapAktivator.lwo",
+      "path": "D/FreeStyle/TrapAktivator.lwo",
+      "size": 430,
+      "stored_size": 319,
+      "offset": 686780,
+      "method": "lzari",
+      "sha256": "74b33465e2cf252f574a4a22b15198f25bdb7ae36cb003c9023ebc2ac4ca1969"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TrappeGrenier.lwo",
+      "path": "D/FreeStyle/TrappeGrenier.lwo",
+      "size": 308,
+      "stored_size": 223,
+      "offset": 687099,
+      "method": "lzari",
+      "sha256": "aae7f24e51b368054dcafcfe1e1570249df1e3a294bc3157914b771b2ca70602"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TrappingBase.jpg",
+      "path": "D/FreeStyle/TrappingBase.jpg",
+      "size": 623,
+      "stored_size": 530,
+      "offset": 687322,
+      "method": "lzari",
+      "sha256": "5e87415584fa2588df9dff21156134f9ed3748a05c51e27ce19f45f336adcd15"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TrappingSystem.lwo",
+      "path": "D/FreeStyle/TrappingSystem.lwo",
+      "size": 528,
+      "stored_size": 396,
+      "offset": 687852,
+      "method": "lzari",
+      "sha256": "2d324654c509ebc54d4fe802f679ad54eb19584ce39573ad51605f7cff0107ef"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\traven.jpg",
+      "path": "D/FreeStyle/traven.jpg",
+      "size": 12827,
+      "stored_size": 12774,
+      "offset": 688248,
+      "method": "lzari",
+      "sha256": "8c139fd8a0058733228e16da0e7dcd3f8b892d16a97571b93e7b51070630c355"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TRAVENTree_Bouh!_1.lwo",
+      "path": "D/FreeStyle/TRAVENTree_Bouh!_1.lwo",
+      "size": 276,
+      "stored_size": 196,
+      "offset": 701022,
+      "method": "lzari",
+      "sha256": "a8ddbef9b866260d12e589fcbf318944d14b9f1659e75a5e6c526509f6a0bcbb"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TRAVENTree_Bouh!_2.lwo",
+      "path": "D/FreeStyle/TRAVENTree_Bouh!_2.lwo",
+      "size": 276,
+      "stored_size": 196,
+      "offset": 701218,
+      "method": "lzari",
+      "sha256": "0faa04bbc92b740d6130594961b3af0d34224e713426f19a90ee5ac9b6037d26"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\tstLANDSCAPE.jpg",
+      "path": "D/FreeStyle/tstLANDSCAPE.jpg",
+      "size": 8266,
+      "stored_size": 7591,
+      "offset": 701414,
+      "method": "lzari",
+      "sha256": "3dd16c8a65d18ae8703b7c07de7aae03fff1308faf5b6454e9886c1b6a2a781f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\TunnelZarb.lwo",
+      "path": "D/FreeStyle/TunnelZarb.lwo",
+      "size": 5064,
+      "stored_size": 3413,
+      "offset": 709005,
+      "method": "lzari",
+      "sha256": "a322a2f229562ed5f99eb40edb5782dea9d33571e9c8c8dc4e3f988775eed022"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\VolumikPhare.jpg",
+      "path": "D/FreeStyle/VolumikPhare.jpg",
+      "size": 735,
+      "stored_size": 651,
+      "offset": 712418,
+      "method": "lzari",
+      "sha256": "5f357e9c06b1209274d7a3ecc48b9b1b1d1eee061242e15e6bb20900eb93968f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Wagon.lwo",
+      "path": "D/FreeStyle/Wagon.lwo",
+      "size": 2704,
+      "stored_size": 1136,
+      "offset": 713069,
+      "method": "lzari",
+      "sha256": "79f73914c9dc91f181a1b35d7c7accfed8e5cdd0f547ba67f9ee52d2d35d1799"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\Xbarr.jpg",
+      "path": "D/FreeStyle/Xbarr.jpg",
+      "size": 8043,
+      "stored_size": 7839,
+      "offset": 714205,
+      "method": "lzari",
+      "sha256": "799d2c19d62d747716e5a3600c45a0c8d83cc9d77b8d2ab100d100f4f7c4c95f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\YOPI_Plane.lwo",
+      "path": "D/FreeStyle/YOPI_Plane.lwo",
+      "size": 272,
+      "stored_size": 197,
+      "offset": 722044,
+      "method": "lzari",
+      "sha256": "e05ae562dbc78cd2f47f94632548362b407678e21e139d8ec246808b10b4c5bc"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ZomBie.moa",
+      "path": "D/FreeStyle/ZomBie.moa",
+      "size": 11646,
+      "stored_size": 4074,
+      "offset": 722241,
+      "method": "lzari",
+      "sha256": "84001bc998d13dd56678c68f9317f636a983f873b600cb83dcd94cab0ea9a442"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\0_sceneTunnelAnim.lws",
+      "path": "D/FreeStyle/0_sceneTunnelAnim.lws",
+      "size": 5885,
+      "stored_size": 1807,
+      "offset": 726315,
+      "method": "lzari",
+      "sha256": "41016953acf8ad41101c700f6d52dd2e5a272340ff8d3d383d915eb0d916a824"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\BGM\\Mush.mo3",
+      "path": "D/FreeStyle/BGM/Mush.mo3",
+      "size": 242740,
+      "stored_size": 212618,
+      "offset": 728122,
+      "method": "lzari",
+      "sha256": "451a86dd50b3549489df6d75eddabc714c7a7b0281aefb4d7847ff1041d997d2"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ClipArts\\zorg.jpg",
+      "path": "D/FreeStyle/ClipArts/zorg.jpg",
+      "size": 6021,
+      "stored_size": 5863,
+      "offset": 940740,
+      "method": "lzari",
+      "sha256": "c7cba5fa9826b4b81fd4515858558af3b8bbd269989c12c18aa0b666e4b970ff"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ClipArts\\monstro.jpg",
+      "path": "D/FreeStyle/ClipArts/monstro.jpg",
+      "size": 7454,
+      "stored_size": 7299,
+      "offset": 946603,
+      "method": "lzari",
+      "sha256": "5f980f2711e081af0050c3896c9f6d261fd405cd7bad16316692640d1a2c4f7c"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ClipArts\\yopi.jpg",
+      "path": "D/FreeStyle/ClipArts/yopi.jpg",
+      "size": 6580,
+      "stored_size": 6451,
+      "offset": 953902,
+      "method": "lzari",
+      "sha256": "b73c47f85f857a16f7993ef1e7a318f3909d776dcbf9a4d48b9ebf5f22272c4f"
+    },
+    {
+      "original_path": "D:\\FreeStyle\\ClipArts\\miette.jpg",
+      "path": "D/FreeStyle/ClipArts/miette.jpg",
+      "size": 7873,
+      "stored_size": 7786,
+      "offset": 960353,
+      "method": "lzari",
+      "sha256": "e5c8d4dcb64970a8c038e2663f65fbd568a7fdfb09bdcfd5d160ae4ad799e865"
+    },
+    {
+      "original_path": "D:\\Devellop\\nX_Pics\\Spark.jpg",
+      "path": "D/Devellop/nX_Pics/Spark.jpg",
+      "size": 2128,
+      "stored_size": 2077,
+      "offset": 968139,
+      "method": "lzari",
+      "sha256": "935e3966178911063a9e79dbde4f60923df694da719ba6e15129a9fb8fbff647"
+    },
+    {
+      "original_path": "D:\\Devellop\\nX_Pics\\Flare.jpg",
+      "path": "D/Devellop/nX_Pics/Flare.jpg",
+      "size": 8601,
+      "stored_size": 7467,
+      "offset": 970216,
+      "method": "lzari",
+      "sha256": "697ceef0d767efc4dde93f73ca4d5c4b6afbd59cce98219b3c896f12eec0e328"
+    },
+    {
+      "original_path": "D:\\Devellop\\nX_Pics\\DefaultEVMAP.jpg",
+      "path": "D/Devellop/nX_Pics/DefaultEVMAP.jpg",
+      "size": 4087,
+      "stored_size": 3918,
+      "offset": 977683,
+      "method": "lzari",
+      "sha256": "4c02cfc47157ee841389422a0e0b7a6516a248c8e67f255db043de47ce14dc3f"
+    }
+  ]
+}

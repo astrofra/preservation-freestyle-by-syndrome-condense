@@ -1,0 +1,92 @@
+  ___                   _
+ /   \  ___  __ __  ___| \  ____  __ __  ____  __
+|  |__|/   \|  /  \/   \  |/ __ \|  /  \/    \/ __ \
+|  |  |  |  |     |  |    |    __)     |__ |__)   __)
+|     |  |  |  |  |  |    |   /  |  |  (  |   |  /  |
+ \___/ \___/|__|___\___/|_|\____/|__|___\____/\____/
+
+			 &
+
+	   s - Y - N - D - R - O - M - e
+
+		  proudly present
+
+	      _{ F R E E S T Y L E }_
+	      a 'Scary Mushrooms' tale
+
+
+_____________________________________________________
+Credits
+
+			       Code by xBaRr/Syndrome
+			   2D Art by Acetone/Condense
+			 2D & 3D Art by Jibe/Condense
+	   2D & 3D Art / Keyframing by xBaRr/Syndrome
+	   Soundtrack / Add 3D Art by Traven/Syndrome
+
+               Moral Support: No Recess(Bolino RULEZ)
+		    "Condense" ascii logo by Alexkidd
+
+_____________________________________________________
+Requirements
+
+				    Win32 + DirectX 7
+	       a CPU, 24 Mb of memory and a soundcard
+
+_____________________________________________________
+Condense Members
+
+		Gozer 		       ggozer@usa.net
+		Jibe  		    jibe@planet-d.net
+		Acetone 	     acet.one@free.fr
+		No Recess 	  astorq@caramail.com
+
+_____________________________________________________
+Syndrome Members
+
+		Traven 		   traven@ifrance.com
+		Kinan		 therin@cybercable.fr
+		xBaRr 		     xbarr@pingoo.com
+
+_____________________________________________________
+Greetings
+
+Jibe
+Acetone
+Xbarr
+	Madé: t'a le bonjour d'Albert
+	(emmanuel chain? non mais puis quoi encore!?)
+	Kinan: salut ma loute! (:
+	Odin/gOds & the familly: Musique maestro!
+	Nytrik: BOUH! non? t'a pas peur?
+	AlexKidd: Zallez tout peter avec RR et Med (;
+	U2: mmmmh... DirectX ou OpenGL?
+	G-Hell: to... to... to... <bwarp>
+		woooooooohooooooo
+	Niakool: Baaah... va pour BASS finalement (:
+	Traveuhn: Hoaa! Ca y est t'est officiellement
+		  graphiste! (:
+
+	... greets to all sceners ...
+Traven
+No Recess
+						  ATC
+					       Nytrik
+					     AlexKidd
+						   U2
+						GHell
+					      Niakool
+						 Odin
+						
+_____________________________________________________
+Technical note
+
+       The engine used in this demo is pure software.
+The only calls made to direct3D when rendering hard-
+ware are SET_RENDERSTATE and DRAWPRIMITIVE.
+       And yes i feel its lame to use (in a demo) D3D
+clipping, lights, bones or whatever sometimes without
+even knowing how it works! =[
+	piXel! rasterizer is pure software even if it
+is fucking slow... }:
+	Grab nX here: 'http://xbarr.planet-d.net'

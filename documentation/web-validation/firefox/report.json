@@ -2,10 +2,10 @@
   "browser": "firefox",
   "native_executable_sha256": "08da019993564eea7255357ed5bb38bf6cfdaea626ab71ed316b1c7abac3d550",
   "site_provenance": {
-    "format_version": 1,
+    "format_version": 2,
     "duration_seconds": 210,
     "sample_rate": 48000,
-    "preparation": "Native LWSC/LWOB loader; stb lossless PNG export; libxm v0.2 PCM16 WAV",
+    "preparation": "Native LWSC/LWOB loader; stb lossless PNG export; original XM streamed with libxm v0.2 WASM",
     "source_assets": {
       "D/Devellop/nX_Pics/DefaultEVMAP.jpg": "4c02cfc47157ee841389422a0e0b7a6516a248c8e67f255db043de47ce14dc3f",
       "D/Devellop/nX_Pics/Flare.jpg": "697ceef0d767efc4dde93f73ca4d5c4b6afbd59cce98219b3c896f12eec0e328",
@@ -175,15 +175,20 @@
     "runtime": {
       "index.html": "513956e0ab169543559ebeb36e4f5a53b365b51197c7eb9a9c34778261e556af",
       "style.css": "b78beba4449de28d41d9c9cbd34ef60f185d42cf82c5c39b80023779d5d75f42",
-      "app.js": "1e60269a88ad2b668746a7ac2742e26f072b97d09b3e1b129c67e7878e0ba02e",
+      "app.js": "481ea54efb8ce4e175ccc541370375987573a1c32ab4adea546ad3674347333e",
       "engine.js": "0a3e031b976827ffea2404218c230e8e941904b6c52c04c32526b3a771e1b139",
       "renderer.js": "42d5d2fc087cafb21d7b98fee0bde75af3018db7d5a0db859e1cc2273030170a",
-      "audio.js": "653d7ca9c49939fb7049d0604c41b01603ec0629fdab2756798e3b291aadba67"
+      "audio.js": "afa8d211d08233e4905cb6d78d2d9d89c55e81d60920c39aa15a50343f1968f1",
+      "xm-decoder.js": "c1169897f5c0b682fe74279b89fdc3c4e35a39a160627c41733dda7747e48e2e",
+      "xm-worker.js": "1858602dfc60387b4563b96f0ca3d25bd87110d77680169df4b444db21e3fa21",
+      "xm-worklet.js": "309075a9ff130e21adf9cb25277f9ce641078fd7b2332ecf316b92955cca9321",
+      "libxm.wasm": "89126541ab778070d15123324c770c6981814796beb491d39d8af4516fcbae12",
+      "libxm-build.json": "17bcb23f83ad1c2c177474c5981f963ba2973282f51b1e6b37f0a22e730cba61"
     },
     "generated": {
       "assets/demo.json": "b21c7529f23b1de54c7980069c97122e93ad5e9fbdce223237e8f50fced50484",
       "assets/motion-reference.json": "0e2c7dd0368b528430961cc9357938b5cdfb51d455b4950f879a26994d5db39d",
-      "assets/mush.wav": "359342da069a9edca1eb43b9212bf14daf68ab36eeff65fbc8a62675e11f4049",
+      "assets/Mush.xm": "d192ae40a27a4070558464294a999be6de8aaf0d216f6ce2c844aeb379080695",
       "assets/textures/0.png": "26f5af4f98004ecceea5afa3b0cc4a1629d16ccb652ce4fce2389c86ec783e75",
       "assets/textures/1.png": "f925b4cadfb15c5ba3ccb45109109c6848a4b48197bf23b9d8a7c1d406144aa4",
       "assets/textures/10.png": "3e0992517409cee3d52eb49b030eb4cae45305e64666298b07c940f6252e8fc8",
@@ -254,7 +259,41 @@
       "assets/textures/8.png": "356957d9fb2fc659c583aaf5ac289731458d9eb1f95c18881c86404e70f0e5e5",
       "assets/textures/9.png": "d998e95fff88cbcee08733181857b19cf6d6568ad6692894162fb0f4f7ded50d"
     },
-    "pcm_sha256": "ebee873c3c27b8141319263facc4e69b1bccc6849475104757e17dd170d1979c"
+    "xm_sha256": "d192ae40a27a4070558464294a999be6de8aaf0d216f6ce2c844aeb379080695",
+    "wasm_build": {
+      "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.14 (96371ed7888fc78c040179f4d4faa82a6a07a116)",
+      "libxm_commit": "e36ab122a169d451e5f219e1c03724a409a877ba",
+      "source_sha256": {
+        "src/xm_web.c": "10fb7f78b5b7a03ed8dc1566a0deacf6371aacb62cd3a97fb63f3f22535dc7e9",
+        "vendor/libxm/src/xm.c": "63c2f219eb7cf80bac59d77c73dbf1e2709f1f6a4d6df6c267199b87c83ebe49",
+        "vendor/libxm/src/context.c": "45a42b3cd230107da9ed30781de8eeeb986f0fac576b787f05e67d10ed0226a8",
+        "vendor/libxm/src/load.c": "3131727f2dc3bc23b3a7bd595186858f2ea4bf9377613d79053ed3ad43a19868",
+        "vendor/libxm/src/play.c": "93152f285f6ff40a1ed07438d1d507c973ca776b560c475c11c4795bc37c6478",
+        "vendor/libxm/include/xm.h": "3df59cf499a5fa3ecf591b15429a7acc20c9d8e0a9ecc93d5ab47e18fe69fad2",
+        "vendor/libxm/src/xm_internal.h": "8c0169e29041f3f83e5593c38bcdeb2d4e1987f36aef83f053f12d8921c60b94",
+        "tools/build_xm_wasm.py": "1c3cfc38443e6b37967257861106e6d23cf16af07a3dee49c64ea5b250f5b665"
+      },
+      "definitions": [
+        "XM_DEBUG=0",
+        "XM_DEFENSIVE=1",
+        "XM_BIG_ENDIAN=0",
+        "XM_LINEAR_INTERPOLATION=1",
+        "XM_RAMPING=1",
+        "XM_STRINGS=1"
+      ],
+      "wasm_sha256": "89126541ab778070d15123324c770c6981814796beb491d39d8af4516fcbae12",
+      "wasm_bytes": 25538,
+      "options": [
+        "-O2",
+        "-std=c11",
+        "-ffp-contract=off",
+        "-fno-fast-math",
+        "standalone",
+        "fixed 4 MiB memory",
+        "64 KiB stack",
+        "emmalloc"
+      ]
+    }
   },
   "frames": [
     {
@@ -263,7 +302,7 @@
       "frame": 106,
       "time": 5,
       "index": 0,
-      "png_sha256": "91e7de60fc55b58cf2141c3d93c54c545a1b92cd835681da942cac4ed6be863b",
+      "png_sha256": "431f4d3062117c061a7be3d8b845fc8006a57daa0dfc020c86f189b507e2ffdf",
       "native_rgb_mae_255": 0.0010611979166666667,
       "native_rgb_rmse_255": 0.032609324671871935
     },
@@ -273,7 +312,7 @@
       "frame": 316,
       "time": 15,
       "index": 0,
-      "png_sha256": "f51b77c9e2fc56bce5ae3445f17fa8a171e9eaec96e69b0029ee971070fac89d",
+      "png_sha256": "2c53e3983c1261e1776b111ad29897705f534127423182c7ab467c1c8030ca89",
       "native_rgb_mae_255": 0.0007215711805555556,
       "native_rgb_rmse_255": 0.026862076996307556
     },
@@ -283,7 +322,7 @@
       "frame": 484,
       "time": 23,
       "index": 0,
-      "png_sha256": "1d07dc15971042e3d8dd5cecb31927b9ba704a3cc89fe243c6b7f9db1f04701c",
+      "png_sha256": "dc20f75c27a75286a25e1625983b2adada0267529846d7d1dbfbf85cdeee342c",
       "native_rgb_mae_255": 0.00017903645833333332,
       "native_rgb_rmse_255": 0.013461299982625088
     },
@@ -293,7 +332,7 @@
       "frame": 91,
       "time": 27,
       "index": 1,
-      "png_sha256": "3400cf806539ccc2de6ce267e6585a23f9e512865ae6cb2e21aef162520d488f",
+      "png_sha256": "fdb5630a6dab2fc0c807481dd9f17563332c52707ca4724763bd917b5491ef49",
       "native_rgb_mae_255": 0.00021918402777777778,
       "native_rgb_rmse_255": 0.015934435979977454
     },
@@ -303,7 +342,7 @@
       "frame": 301,
       "time": 34,
       "index": 1,
-      "png_sha256": "ef8f494a00402a506a45687a5a05746e2cb29474fc63d46f3078a500d865611b",
+      "png_sha256": "8d8b3d0bd6988a30b0c5f6b9d3d03bbb3d436a4fe0dc2b40454b60b1d7e31a54",
       "native_rgb_mae_255": 3.363715277777778e-05,
       "native_rgb_rmse_255": 0.005799754544614606
     },
@@ -313,7 +352,7 @@
       "frame": 61,
       "time": 40,
       "index": 2,
-      "png_sha256": "bc358fa1e5e815885bf9f7b753d3972ef9131dd6ed7fa1d73a2a9764daf7a5d5",
+      "png_sha256": "7a39a1257b82d9d8f259744a4e5ff3a847b8c7985e4903e763ee0316f709385e",
       "native_rgb_mae_255": 0.0,
       "native_rgb_rmse_255": 0.0
     },
@@ -323,7 +362,7 @@
       "frame": 151,
       "time": 50,
       "index": 3,
-      "png_sha256": "a48cf4b284a61138240e36724df06d068711049c79e33ee5ac3fa64b08b83cec",
+      "png_sha256": "10fb9448d998bcfc7d10ee8144153f7733772b7304c4ba96c971633ad36b4b05",
       "native_rgb_mae_255": 0.0012272135416666666,
       "native_rgb_rmse_255": 0.251439000913851
     },
@@ -333,7 +372,7 @@
       "frame": 601,
       "time": 65,
       "index": 3,
-      "png_sha256": "6b23bd10624cf62b26513a073da0343f7ea0540e45db70e425c540e92f41bc59",
+      "png_sha256": "0940361bfdcf8521595b29a21c9cc171a228b6437c107030e0d76857557ff7b7",
       "native_rgb_mae_255": 3.7977430555555556e-05,
       "native_rgb_rmse_255": 0.006162583107395434
     },
@@ -343,7 +382,7 @@
       "frame": 226,
       "time": 78,
       "index": 4,
-      "png_sha256": "b3918920125a7a038eac8174b5910c682f08046170a940eab87d56aea136e6eb",
+      "png_sha256": "401629f86938fdf55fb43742e7df9a4e2b125d84516143d012e8b920cb812e8d",
       "native_rgb_mae_255": 8.897569444444445e-05,
       "native_rgb_rmse_255": 0.009432692852226476
     },
@@ -353,7 +392,7 @@
       "frame": 586,
       "time": 86,
       "index": 4,
-      "png_sha256": "bffda686e270f0b83f517829711e91e3ef8b118301a4207620f6ad7bc9bafa16",
+      "png_sha256": "18c6a3a9cd2f1966e675dbd327c3cf0d38110c6a358e75678a1e67bbf95a318b",
       "native_rgb_mae_255": 7.595486111111111e-05,
       "native_rgb_rmse_255": 0.008715208609729954
     },
@@ -363,7 +402,7 @@
       "frame": 901,
       "time": 93,
       "index": 4,
-      "png_sha256": "698beacb91eb5016b138e5d8b872bba98290bbce40678bac92648cc95b74b95f",
+      "png_sha256": "4914323bb226b47e2d9c945c76185b70fee10b681646b3e86107311c04a4150c",
       "native_rgb_mae_255": 0.00013129340277777778,
       "native_rgb_rmse_255": 0.011458333333333334
     },
@@ -373,7 +412,7 @@
       "frame": 46,
       "time": 99,
       "index": 5,
-      "png_sha256": "fe3e2ad6a8cfe2d51d29a8d720f79dd7593e60e90ac2a4756db81d631ab7e014",
+      "png_sha256": "1a4b59e209b5e0859e43e429669cd3cdc6090679f4e744d689fb4dd07c601c0d",
       "native_rgb_mae_255": 0.0,
       "native_rgb_rmse_255": 0.0
     },
@@ -383,7 +422,7 @@
       "frame": 211,
       "time": 110,
       "index": 6,
-      "png_sha256": "ee0810f3011ac99bca9796854330a8b1cf3336187839a2ce19b9d2a8ec860e68",
+      "png_sha256": "99b05eb5c2a49207cdc1508fb3d356bc9db03b1d6d713b6dd65504b0f185037a",
       "native_rgb_mae_255": 0.00017469618055555554,
       "native_rgb_rmse_255": 0.04030321275448563
     },
@@ -393,7 +432,7 @@
       "frame": 511,
       "time": 120,
       "index": 6,
-      "png_sha256": "3bca559326594955f09e6bd1aaf7057d2911703608abb47d5151ba79704e83f0",
+      "png_sha256": "9ad97ad0eb67dc02bfb4c326b0bec931003427a3629bfe32b384a1e99a6c6c3e",
       "native_rgb_mae_255": 8.572048611111111e-05,
       "native_rgb_rmse_255": 0.009258535851370405
     },
@@ -403,7 +442,7 @@
       "frame": 151,
       "time": 136,
       "index": 7,
-      "png_sha256": "22467232947193fac02f21be8306962a08cf24ac5d2eafa670c68f8e3957b1f3",
+      "png_sha256": "35c89a2c32034d79cf8302384ba0f65ee9a3c421ba5485a4b560c5bc6b5fdd0d",
       "native_rgb_mae_255": 3.363715277777778e-05,
       "native_rgb_rmse_255": 0.005799754544614606
     },
@@ -413,7 +452,7 @@
       "frame": 361,
       "time": 143,
       "index": 7,
-      "png_sha256": "0cd18c12c860830bfd82fa7b4b75deaa03b3a4cb54b86dd743bc96dc36fb8b66",
+      "png_sha256": "d4dd330092534044d146eeb2d3156cf9bce8a02b57a98af39cbdf8dbad544bce",
       "native_rgb_mae_255": 3.472222222222222e-05,
       "native_rgb_rmse_255": 0.005892556509887896
     },
@@ -423,7 +462,7 @@
       "frame": 181,
       "time": 153,
       "index": 8,
-      "png_sha256": "11e10bed3571663f9941e77b07d343b08751944e9343186e5335f02ffe584ec2",
+      "png_sha256": "b2c415a09f2f09c52f897b03a9065fcdedad9ac8a0ea554678eeb44940d8aa75",
       "native_rgb_mae_255": 3.689236111111111e-05,
       "native_rgb_rmse_255": 0.006073908223797188
     },
@@ -433,7 +472,7 @@
       "frame": 451,
       "time": 162,
       "index": 8,
-      "png_sha256": "c18939493f43711896750b617aeea4923c6b72ee6898d1978d89374842c354c4",
+      "png_sha256": "43283dc2b04752b3ed00c9ebe9f3f3733a5b546efbc6625ab28f5234d9902b08",
       "native_rgb_mae_255": 0.0003841145833333333,
       "native_rgb_rmse_255": 0.17282879293296782
     },
@@ -443,7 +482,7 @@
       "frame": 151,
       "time": 172,
       "index": 9,
-      "png_sha256": "6ed7ff08cc4cd86241017ddaa3814b373323f7b75bf73d22d42d4985f3b6c94d",
+      "png_sha256": "c906e99dd4a02d92307160065ba730e0b302768cc188bffdd02ca035887b6a69",
       "native_rgb_mae_255": 0.02380099826388889,
       "native_rgb_rmse_255": 1.1302227341632465
     },
@@ -453,7 +492,7 @@
       "frame": 481,
       "time": 183,
       "index": 9,
-      "png_sha256": "f034adaed63cf5b3648214f1967db03d64443cb992cf3d2f78dad20b50ad0f08",
+      "png_sha256": "63514b307b7c6a6daf09e2ad5d52ee798e3c38617d5c65af8a473efc7aaedf81",
       "native_rgb_mae_255": 0.008263888888888888,
       "native_rgb_rmse_255": 0.6708899432635894
     },
@@ -463,7 +502,7 @@
       "frame": 751,
       "time": 192,
       "index": 9,
-      "png_sha256": "47b843611d7f26bd6284e0ac6a0a321758855c160fb68e193dca3e36a6c294ce",
+      "png_sha256": "2609d97ad0a28b7ec05b9294f4a9c1b5535266675e9d91f6322b1128f90d546b",
       "native_rgb_mae_255": 0.004993489583333333,
       "native_rgb_rmse_255": 0.07418539089485357
     },
@@ -473,7 +512,7 @@
       "frame": 121,
       "time": 204,
       "index": 10,
-      "png_sha256": "a1f007d29e0f8861a1669388c95c65938fdc205fd06e6ff10f4870ee777611ee",
+      "png_sha256": "f6636a893097a9a35d9567358feeab3ba2b685d615f47b158c6d26d034e316ae",
       "native_rgb_mae_255": 0.0,
       "native_rgb_rmse_255": 0.0
     }
@@ -530,6 +569,18 @@
     "state": "running",
     "sampleRate": 48000,
     "audioDuration": 210,
+    "backend": "libxm v0.2 / WebAssembly / AudioWorklet",
+    "streaming": {
+      "playedFrames": 0,
+      "underruns": 0,
+      "discontinuities": 0,
+      "peakQueuedFrames": 0,
+      "queuedFrames": 0,
+      "memoryBytes": 4194304,
+      "contextBytes": 1348189,
+      "checkpointBytes": 4194304,
+      "checkpointCount": 1
+    },
     "drawCalls": 174,
     "scene": "0_sceneTunnelAnim.lws",
     "frame": 1,
@@ -560,9 +611,14 @@
     }
   },
   "audio": {
+    "type": "validation",
+    "id": 1,
     "frames": 10080000,
     "sampleRate": 48000,
-    "pcmSha256": "ebee873c3c27b8141319263facc4e69b1bccc6849475104757e17dd170d1979c"
+    "pcmSha256": "ebee873c3c27b8141319263facc4e69b1bccc6849475104757e17dd170d1979c",
+    "wav_requests": 0,
+    "module_bytes": 1086577,
+    "decoder_bytes": 25538
   },
   "capture_order_independent": true,
   "scene_boundaries_passed": true,

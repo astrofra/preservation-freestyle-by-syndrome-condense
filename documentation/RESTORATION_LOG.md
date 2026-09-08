@@ -421,3 +421,101 @@ known; individual execution times were not recorded, so none are invented here.
   all GPUs is not asserted. The port retains the native reconstruction's known
   original-release fidelity limits and explicit float-to-PCM16 quantization.
   No blocking issue remains for the delivered Windows browser build.
+
+## 2026-09-08 18:02 — Direct XM playback requested
+
+- User requested playing the XM in the browser using a library, avoiding the
+  monolithic WAV. Investigated libxm.js, jslibxm and pure JavaScript XM players.
+  The libxm project provides an Emscripten browser-port precedent.
+- Chose to reuse the already vendored libxm v0.2 core, compiled to WebAssembly
+  and controlled from JavaScript. This minimizes changes in tracker effect
+  interpretation compared with the native player. The module is 1,086,577 bytes,
+  versus 40,320,044 bytes for the prior PCM16 WAV.
+- No WebAssembly compiler was found on PATH or in the Visual Studio installation.
+  Started installing a workspace-local Emscripten toolchain under ignored
+  analysis/emsdk. The SDK will not be part of the runtime or source archive.
+- Planned streaming audio production with bounded buffers, an audio-clock
+  timeline, pause/seek/restart support, and numerical comparison against the
+  native decoder before replacing the packaged WAV.
+- Inspected the clean committed baseline; the user's untracked journal PDF
+  remains untouched.
+
+## 2026-09-08 18:22 — XM streaming implemented and first tests passed
+
+- Installed Emscripten 4.0.14 in analysis/emsdk and activated its local config.
+  The SDK also supplied local Node/Python tools. No permanent/system PATH
+  registration was used. The SDK download was approximately 629 MB, separate
+  from the small decoder shipped to users.
+- Added src/xm_web.c and tools/build_xm_wasm.py. The unchanged native libxm
+  sources/options compile to a standalone WASM module with no imports.
+  The first 8 MiB build was 25,540 bytes; reduced fixed memory to 4 MiB after
+  measuring a 1,348,189-byte libxm context. Final WASM size: 25,538 bytes.
+- Decoded all 210 seconds under the SDK's Node runtime, converted to PCM16 with
+  the native export's quantization, and compared all 20,160,000 values. Exact
+  identity: zero differing samples, RMS error 0, SHA-256
+  ebee873c3c27b8141319263facc4e69b1bccc6849475104757e17dd170d1979c.
+  Full decoding plus PCM conversion/file output took about 1.865 seconds.
+- Added a dedicated XM worker, a bounded AudioWorklet queue, and a decoder that
+  stores at most three complete state snapshots. Normal audio state is bounded
+  to 4 MiB live WASM plus at most 12 MiB snapshots and a small PCM queue, rather
+  than a complete 210-second PCM buffer. Full-memory snapshots preserve both
+  context data and the library's file-static PRNG.
+- Replaced the Web Audio WAV source with the XM stream, retaining the audio
+  clock and cancellation semantics for pause, seek and rapid requests.
+  Production hosting now requires HTTPS for AudioWorklet; localhost HTTP works.
+- Two editing/tool attempts failed before changing files: a patch tried to
+  delete and add the same path, which apply_patch rejects; then a helper read
+  had one extra Python parenthesis. Corrected the helper and applied an in-place
+  update. No source was lost.
+- First Chromium smoke test passed startup, playback, pause and a cold seek to
+  120 seconds (about 1.25 seconds preparation). Queue peak was 24,448 frames;
+  no underruns or discontinuities. The browser also reproduced the full native
+  PCM16 hash in offline QA. Recorded zero WAV network requests.
+- Preparation now copies the original XM and checked-in WASM, verifies decoder
+  provenance and no longer invokes native WAV export. Preserved the old generated
+  staging WAV under analysis/obsolete-web-audio instead of deleting it.
+  The first new site ZIP was 6,215,672 bytes, versus about 37 MB previously.
+- Updated browser validation to generate its native WAV oracle only in ignored
+  QA output, assert no WAV requests, and check consumed frames, queue bounds,
+  underruns and discontinuities during complete playback. The full Chromium
+  run is in progress; image/motion/audio/control checks have already passed.
+
+## 2026-09-08 18:30 — Direct XM delivery verified and packaged
+
+- Complete Chromium playback passed: exactly 10,080,000 stereo frames consumed
+  over the 210-second soundtrack; zero underruns, zero discontinuities, and
+  at most 24,576 queued frames (0.512 seconds). All eleven scene transitions
+  were observed, with maximum delay 8 ms. Mean render time was 1.830 ms;
+  mean frame interval 17.373 ms, p95 25.400 ms. End polling finished after
+  210.578 wall seconds. The final decoder cache held three snapshots.
+- Firefox passed image parity, motion, full offline PCM identity, capture order,
+  scene boundaries and all nine interaction checks with the new audio backend.
+  Full uninterrupted 210-second playback was measured in Chromium.
+- Added and ran tools/validate_xm_seek.py. Seven nonsequential windows at
+  120.123, 5.321, 93.111, 209.9, 195.875, 29.999 and 0 seconds exactly match
+  the independent native PCM16 samples: 28,672 values checked, zero mismatches.
+  This includes backward checkpoint restoration and crossing a checkpoint.
+  Measured seek preparation ranged from 0.3 ms to approximately 1.12 seconds
+  for these particular cache states. Report: documentation/web-validation/xm-seek/.
+- git diff --check initially flagged CRLF in newly regenerated tracked reports.
+  Changed the report writer to explicit LF and normalized those reports without
+  changing their data. The check now passes.
+- Documented direct XM loading, WASM rebuilding, memory/queue bounds, HTTPS or
+  localhost requirements, cold-seek latency and offline QA behavior. Source
+  verification tolerates Git's equivalent LF/CRLF checkout representations.
+- Built the freestyle_web CMake target successfully without native WAV export.
+  Preserved the obsolete preview WAV under analysis/obsolete-web-audio as well.
+  Neither the packaged site nor the preview's asset directory needs that file.
+- Final web ZIP: 88 files, 6,216,375 bytes; no WAV members. Verified every runtime
+  and generated-asset hash, exact original XM bytes, and agreement of both
+  browser reports with the final site's provenance.
+- WASM SHA-256:
+  89126541ab778070d15123324c770c6981814796beb491d39d8af4516fcbae12.
+  Web ZIP SHA-256:
+  6cd7cd1fd633bb7d953d1fcb07f749cdae48ca9c8f72482b943cef0a83bec25d.
+- All three native CTest regressions passed; Python tools compile. Refreshing
+  the complete source archive includes the C bridge, WASM build script, vendored
+  library, JavaScript streaming implementation, tests, reports and this journal.
+- Direct XM playback is complete on the tested Chromium/Firefox environment.
+  The existing unverified Safari/mobile scope remains unchanged. No blocker
+  was encountered.

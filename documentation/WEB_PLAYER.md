@@ -20,9 +20,11 @@ From the repository, after preparation:
 
     python -m http.server 8000 --bind 127.0.0.1 --directory dist/freestyle-web
 
-The directory is also directly deployable to a static HTTP/HTTPS host, including
-a subdirectory. It contains all JavaScript, artwork, soundtrack and licenses;
-there are no CDN requests, npm packages, WebAssembly modules or server APIs.
+The directory is directly deployable to a static HTTPS host, including a
+subdirectory. AudioWorklet requires a secure context: HTTPS in production or
+HTTP on localhost for development. It contains all JavaScript, artwork, the
+original XM, a small WebAssembly decoder and licenses. There are no CDN requests,
+npm dependencies or server APIs; no cross-origin isolation headers are required.
 Preserve the directory structure and serve JavaScript with an appropriate
 JavaScript MIME type. Gzip/Brotli on the host is optional.
 
@@ -68,12 +70,33 @@ It exports scene keys, geometry, normals, UVs and materials as JSON, plus
 losslessly decoded textures. Motion evaluation and geometry rendering happen
 in the browser; frames are not baked to images.
 
-The music preparation invokes the native player's --audio-wav export on the
-supplied Mush.xm, using vendored libxm v0.2. The browser loads a lossless PCM16
-WAV (48 kHz, stereo, 210 seconds; about 40 MB) into a Web Audio buffer. The
-native live mixer uses float PCM, so the export has explicit 16-bit quantization.
-The browser does not implement a separate XM tracker decoder. This choice keeps
-the musical interpretation identical to the already validated native export.
+Music is loaded directly from Mush.xm (1,086,577 bytes). Vendored libxm v0.2,
+the same tracker core used by the native player, is compiled to a 25,538-byte
+standalone WebAssembly module. A dedicated worker decodes float PCM in small
+blocks; an AudioWorklet consumes a queue of at most 0.512 seconds. The graphics
+thread does not decode music. No WAV is fetched or packaged, and playback does
+not pre-render the complete song.
+
+The decoder uses 4 MiB of fixed memory and at most three 4 MiB snapshots of its
+state, including the PRNG. These snapshots accelerate seeking while preserving
+tracker effects and sample positions. A first seek far ahead can take about
+one or two seconds on the tested host; subsequent seeks can use cached states.
+The picture and audio clock wait together while preparing a seek. Paused
+exact-time image capture does not require decoding the corresponding audio.
+
+The prebuilt WASM binary and its source hashes are included, so ordinary builds
+need no Emscripten installation. To rebuild the decoder after changing its C
+source or libxm, install/activate Emscripten 4.0.14, then run:
+
+    python tools/build_xm_wasm.py
+
+Or point explicitly to a workspace-local activated SDK:
+
+    python tools/build_xm_wasm.py --emsdk path/to/emsdk
+
+The bridge is src/xm_web.c, the unchanged library is vendor/libxm/, and exact
+compiler/source/binary provenance is web/libxm-build.json. Web preparation
+rejects a stale decoder if its recorded source or binary hashes differ.
 
 No video-reference files or original executable are needed to run the site.
 The source assets remain unchanged. The original release is needed only for
@@ -99,7 +122,10 @@ After window.freestyle.ready, the browser exposes a small validation interface:
 captureAt pauses and renders at the exact requested timestamp in [0,210).
 It is independent of previous captures and playback frame rate.
 validateMotion compares JavaScript transforms with native C++ oracle samples.
-validateAudio hashes every decoded PCM16 sample against the native WAV export.
+validateAudio performs optional offline QA while paused: it decodes the module
+in a separate WASM instance, quantizes to PCM16 and hashes every sample against
+the native export. The temporary full PCM array is used only by this diagnostic,
+never by normal playback. status reports queue, memory and underrun counters.
 
 ## Reproduce validation
 
@@ -109,18 +135,25 @@ Optional QA dependencies:
     python -m playwright install chromium firefox
     python tools/validate_web.py --video --playback
     python tools/validate_web.py --browser firefox --output captures/web-firefox
+    python tools/validate_xm_seek.py --output captures/xm-seek
 
 The tool starts its own loopback HTTP server and closes it afterward. It checks:
 
 - 22 native/WebGL frame pairs, with an RGB MAE threshold of 0.5 / 255.
 - Reverse capture order and exact scene boundary selection.
 - 292 fractional timeline samples against native matrices.
-- SHA-256 identity of all 20,160,000 PCM16 sample values.
+- SHA-256 identity of all 20,160,000 PCM16 sample values after quantizing decoder
+  output, and confirmation that the page never requests a WAV.
 - Gesture start, pause, seek, restart, mute, fullscreen and PNG download,
   including cancellation of pending audio starts and rapid consecutive seeks.
-- With --playback, all 210 seconds, transitions and render timing.
+- With --playback, all 210 seconds, transitions, render timing, actual consumed
+  audio frames, absence of underruns/discontinuities and bounded queue size.
 - With --video, direct comparison against the remuxed video using the existing
   documented clock fit. FFmpeg is needed only for this optional video check.
+
+The separate XM seek check compares seven nonsequential sample windows with
+the native decoder, including restoring earlier snapshots and crossing a
+30-second checkpoint. Its report records exact sample mismatches and seek times.
 
 Results are Markdown, JSON, PNGs and contact sheets. The checked-in milestone
 reports are under documentation/web-validation/. The video cut drift remains
@@ -129,12 +162,10 @@ comparison-only fit. Playback always keeps the binary's original timing.
 
 ## Parity and limits
 
-Validated on Windows with Chromium 151.0.7922.34 and Firefox 153.0. Across the
-22 sampled images, maximum native/WebGL RGB MAE is 0.1169 / 255 in Chromium
-and 0.0238 / 255 in Firefox. The final Chromium build completed uninterrupted
-playback with a maximum observed scene-cut delay of 10.7 ms. All PCM16 audio
-sample values match the native WAV export. This is measured parity, not a
-promise of universal pixel identity.
+Browser versions, measured image differences and complete-playback timing are
+recorded in the validation reports. The WASM decoder reproduces every sample
+of the native PCM16 export after matching its quantization; normal browser
+playback uses the decoder's float output directly.
 
 The parity target is this repository's native reconstruction. Its known
 differences from the original release remain, principally particle behavior
@@ -154,4 +185,6 @@ creators' rights. Package licenses include libxm and stb notices.
 
 API references used for this port:
 [Khronos WebGL 2 specification](https://registry.khronos.org/webgl/specs/latest/2.0/)
-and [Web Audio scheduling](https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start).
+and [AudioWorklet](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet).
+Library precedents: [libxm](https://github.com/Artefact2/libxm) and its
+[Emscripten browser port](https://github.com/Artefact2/libxm.js).

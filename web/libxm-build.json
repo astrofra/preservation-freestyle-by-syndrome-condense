@@ -1,0 +1,34 @@
+{
+  "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.14 (96371ed7888fc78c040179f4d4faa82a6a07a116)",
+  "libxm_commit": "e36ab122a169d451e5f219e1c03724a409a877ba",
+  "source_sha256": {
+    "src/xm_web.c": "10fb7f78b5b7a03ed8dc1566a0deacf6371aacb62cd3a97fb63f3f22535dc7e9",
+    "vendor/libxm/src/xm.c": "63c2f219eb7cf80bac59d77c73dbf1e2709f1f6a4d6df6c267199b87c83ebe49",
+    "vendor/libxm/src/context.c": "45a42b3cd230107da9ed30781de8eeeb986f0fac576b787f05e67d10ed0226a8",
+    "vendor/libxm/src/load.c": "3131727f2dc3bc23b3a7bd595186858f2ea4bf9377613d79053ed3ad43a19868",
+    "vendor/libxm/src/play.c": "93152f285f6ff40a1ed07438d1d507c973ca776b560c475c11c4795bc37c6478",
+    "vendor/libxm/include/xm.h": "3df59cf499a5fa3ecf591b15429a7acc20c9d8e0a9ecc93d5ab47e18fe69fad2",
+    "vendor/libxm/src/xm_internal.h": "8c0169e29041f3f83e5593c38bcdeb2d4e1987f36aef83f053f12d8921c60b94",
+    "tools/build_xm_wasm.py": "1c3cfc38443e6b37967257861106e6d23cf16af07a3dee49c64ea5b250f5b665"
+  },
+  "definitions": [
+    "XM_DEBUG=0",
+    "XM_DEFENSIVE=1",
+    "XM_BIG_ENDIAN=0",
+    "XM_LINEAR_INTERPOLATION=1",
+    "XM_RAMPING=1",
+    "XM_STRINGS=1"
+  ],
+  "wasm_sha256": "89126541ab778070d15123324c770c6981814796beb491d39d8af4516fcbae12",
+  "wasm_bytes": 25538,
+  "options": [
+    "-O2",
+    "-std=c11",
+    "-ffp-contract=off",
+    "-fno-fast-math",
+    "standalone",
+    "fixed 4 MiB memory",
+    "64 KiB stack",
+    "emmalloc"
+  ]
+}

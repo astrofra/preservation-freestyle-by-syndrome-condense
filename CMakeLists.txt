@@ -33,7 +33,7 @@ if(FREESTYLE_BUILD_PLAYER AND Python3_Interpreter_FOUND)
     add_custom_target(freestyle_web
         COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tools/build_web.py"
             --bin-dir "$<TARGET_FILE_DIR:freestyle>" --package
-        DEPENDS freestyle freestyle_export_web
+        DEPENDS freestyle_export_web
         COMMENT "Preparing the standalone JavaScript/WebGL site")
 endif()
 

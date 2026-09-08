@@ -56,11 +56,11 @@ async function boot() {
     if(!Number.isInteger(width)||!Number.isInteger(height)||width<64||height<64||width>4096||height>4096)throw new Error('Invalid capture dimensions');
     canvas.width=width;canvas.height=height;
     const response=await fetch('./assets/demo.json');if(!response.ok)throw new Error('Assets missing. Run tools/build_web.py first.');
-    data=prepareData(await response.json());renderer=new Renderer(canvas,data);audio=new AudioClock();
+    data=prepareData(await response.json());renderer=new Renderer(canvas,data);audio=new AudioClock();audio.onError=error;
     const base=new URL('./assets/',location.href);
     await Promise.all([
         renderer.preload(base,(n,total)=>{$('loading').value=n/total*.5;$('message').textContent='Loading artwork… '+n+' / '+total;}),
-        audio.load(new URL('mush.wav',base))
+        audio.load(new URL('Mush.xm',base))
     ]);
     ready=true;$('loading').value=1;$('loading').hidden=true;$('message').textContent='Freestyle · 3 min 30';
     for(const id of ['start','play','restart','seek','mute','capture','fullscreen'])$(id).disabled=false;
@@ -88,7 +88,7 @@ async function boot() {
     window.freestyle={
         ready:true,version:1,duration:data.duration,play,pause:()=>{audio.pause();render(audio.time());},seek,
         status:()=>({...audio.status(),...lastFrame,transitions:[...transitions],graphics:renderer.info}),
-        resetMetrics:()=>{renderTimes=[];frameIntervals=[];lastTick=null;transitions.length=0;previousScene=-1;},
+        resetMetrics:()=>{renderTimes=[];frameIntervals=[];lastTick=null;transitions.length=0;previousScene=-1;audio.resetMetrics();},
         metrics:()=>{
             const summary=a=>{const sorted=[...a].sort((x,y)=>x-y);return {count:a.length,
                 mean:a.length?a.reduce((x,y)=>x+y,0)/a.length:0,p95:sorted[Math.floor(sorted.length*.95)]||0,max:sorted.at(-1)||0};};
@@ -111,14 +111,7 @@ async function boot() {
             }
             return {samples:references.length,values,maxError,frameError,worst};
         },
-        validateAudio:async()=>{
-            const channels=[audio.buffer.getChannelData(0),audio.buffer.getChannelData(1)];
-            const pcm=new Int16Array(audio.buffer.length*2);
-            for(let i=0;i<audio.buffer.length;i++){pcm[i*2]=Math.round(channels[0][i]*32768);pcm[i*2+1]=Math.round(channels[1][i]*32768);}
-            const hash=await crypto.subtle.digest('SHA-256',pcm);
-            return {frames:audio.buffer.length,sampleRate:audio.buffer.sampleRate,
-                pcmSha256:Array.from(new Uint8Array(hash),v=>v.toString(16).padStart(2,'0')).join('')};
-        }
+        validateAudio:()=>audio.validateAudio()
     };
     requestAnimationFrame(loop);
 }

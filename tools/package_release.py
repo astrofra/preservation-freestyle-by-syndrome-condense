@@ -31,7 +31,7 @@ def files_under(path):
             continue
         relative = file.relative_to(ROOT)
         if relative.parts[:2] == ('documentation', 'web-validation') and (
-                'native' in relative.parts[2:] or 'web' in relative.parts[2:] or file.name == 'native.log'):
+                'native' in relative.parts[2:] or 'web' in relative.parts[2:] or file.name in {'native.log','native-mush.wav'}):
             continue
         yield file
 

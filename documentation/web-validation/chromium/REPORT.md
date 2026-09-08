@@ -8,7 +8,7 @@ Maximum sampled native/WebGL RGB MAE: **0.1169 / 255**. Acceptance threshold: 0.
 
 Native motion oracle: 292 times, 125808 matrix components; maximum error 0.00012008.
 
-All 20,160,000 decoded PCM16 sample values match the native WAV export by SHA-256. The native live mixer uses float PCM; the WAV introduces 16-bit quantization.
+The original XM is decoded by libxm v0.2 in WebAssembly and streamed through an AudioWorklet. No WAV is fetched. Offline QA converts the generated float samples to PCM16: all 20,160,000 values match the native export by SHA-256. Live playback retains float samples.
 
 Reverse-order captures, scene boundaries, gesture play, pause, seek, restart, mute, PNG download, fullscreen, pending-play cancellation and rapid seeks passed.
 
@@ -43,6 +43,8 @@ Video comparison uses the same documented affine clock fit as native validation.
 
 Fit only aligns comparison frames. Playback uses the executable's absolute timing. Report raw timing differences too. Video cut drift and audio alignment differ; the reference capture's exact clock behavior is unknown.
 
-Full audio-clock playback completed all 11 scenes in 210.47 wall seconds. Maximum observed cut delay: 0.0107 s. Mean frame interval: 17.37 ms; p95: 24.40 ms.
+Full audio-clock playback completed all 11 scenes in 210.58 wall seconds. Maximum observed cut delay: 0.0080 s. Mean frame interval: 17.37 ms; p95: 25.40 ms.
+
+Audio stream: 10080000 stereo frames consumed; 0 underruns; 0 discontinuities. Peak queued audio: 0.512 seconds.
 
 These measurements establish parity with the native reconstruction on the tested browser/GPU, not exact reproduction of the original 1999/2000 renderer or universal GPU pixel identity. See report.json for versions, input/output hashes and warnings.

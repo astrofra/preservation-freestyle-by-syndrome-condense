@@ -1,0 +1,77 @@
+{
+  "browser": "151.0.7922.34",
+  "native_executable_sha256": "08da019993564eea7255357ed5bb38bf6cfdaea626ab71ed316b1c7abac3d550",
+  "wasm_sha256": "89126541ab778070d15123324c770c6981814796beb491d39d8af4516fcbae12",
+  "probes": [
+    {
+      "time": 120.123,
+      "samples": 4096,
+      "mismatches": 0,
+      "seekMs": 1119.6000001430511,
+      "memoryBytes": 4194304,
+      "contextBytes": 1348189,
+      "checkpointBytes": 12582912,
+      "checkpointCount": 3
+    },
+    {
+      "time": 5.321,
+      "samples": 4096,
+      "mismatches": 0,
+      "seekMs": 22,
+      "memoryBytes": 4194304,
+      "contextBytes": 1348189,
+      "checkpointBytes": 12582912,
+      "checkpointCount": 3
+    },
+    {
+      "time": 93.111,
+      "samples": 4096,
+      "mismatches": 0,
+      "seekMs": 38.10000014305115,
+      "memoryBytes": 4194304,
+      "contextBytes": 1348189,
+      "checkpointBytes": 12582912,
+      "checkpointCount": 3
+    },
+    {
+      "time": 209.9,
+      "samples": 4096,
+      "mismatches": 0,
+      "seekMs": 1089.8000001907349,
+      "memoryBytes": 4194304,
+      "contextBytes": 1348189,
+      "checkpointBytes": 12582912,
+      "checkpointCount": 3
+    },
+    {
+      "time": 195.875,
+      "samples": 4096,
+      "mismatches": 0,
+      "seekMs": 202.09999990463257,
+      "memoryBytes": 4194304,
+      "contextBytes": 1348189,
+      "checkpointBytes": 12582912,
+      "checkpointCount": 3
+    },
+    {
+      "time": 29.999,
+      "samples": 4096,
+      "mismatches": 0,
+      "seekMs": 178.80000019073486,
+      "memoryBytes": 4194304,
+      "contextBytes": 1348189,
+      "checkpointBytes": 12582912,
+      "checkpointCount": 3
+    },
+    {
+      "time": 0,
+      "samples": 4096,
+      "mismatches": 0,
+      "seekMs": 0.2999999523162842,
+      "memoryBytes": 4194304,
+      "contextBytes": 1348189,
+      "checkpointBytes": 12582912,
+      "checkpointCount": 3
+    }
+  ]
+}

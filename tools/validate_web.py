@@ -68,6 +68,8 @@ def main():
             browser = getattr(p, args.browser).launch(**options)
             report['browser_version'] = browser.version
             page = browser.new_page(viewport=dict(width=1000, height=850), device_scale_factor=1)
+            requested = []
+            page.on('request', lambda r: requested.append(r.url))
             page.on('pageerror', lambda e: report['errors'].append(str(e)))
             page.on('console', lambda m: report['warnings'].append(m.text) if m.type == 'warning' else None)
             page.goto(url)
@@ -79,10 +81,17 @@ def main():
             assert report['motion']['maxError'] < .001, report['motion']
             assert report['motion']['frameError'] < 1e-7, report['motion']
             report['audio'] = page.evaluate('window.freestyle.validateAudio()')
-            with wave.open(str(args.site/'assets/mush.wav'), 'rb') as w:
+            native_wav = output/'native-mush.wav'
+            subprocess.run([args.exe.resolve(), '--assets', ROOT/'demo-assets/cds-freestyle',
+                            '--audio-wav', native_wav], check=True, capture_output=True)
+            with wave.open(str(native_wav), 'rb') as w:
                 expected_pcm_hash = hashlib.sha256(w.readframes(w.getnframes())).hexdigest()
             assert report['audio']['pcmSha256'] == expected_pcm_hash, report['audio']
             assert report['audio']['frames'] == 210*48000
+            assert not any('.wav' in u.lower() for u in requested), requested
+            report['audio']['wav_requests'] = 0
+            report['audio']['module_bytes'] = (args.site/'assets/Mush.xm').stat().st_size
+            report['audio']['decoder_bytes'] = (args.site/'libxm.wasm').stat().st_size
             print('Motion and all PCM audio samples match native oracle.', flush=True)
             sheet = Image.new('RGB', (1280, 264*((len(rows)+1)//2)))
             video_sheet = Image.new('RGB', sheet.size) if reference else None
@@ -172,6 +181,7 @@ def main():
                 page.evaluate('window.freestyle.resetMetrics()')
                 page.locator('#play').click()
                 started = time.monotonic()
+                page.wait_for_function('window.freestyle.status().playing', timeout=10000)
                 while page.evaluate('window.freestyle.status().playing'):
                     page.wait_for_timeout(1000)
                     elapsed = time.monotonic()-started
@@ -181,6 +191,11 @@ def main():
                         raise AssertionError('Playback failed to end')
                 report['playback'] = page.evaluate('window.freestyle.metrics()')
                 report['playback']['wall_seconds'] = time.monotonic()-started
+                report['playback']['streaming'] = page.evaluate('window.freestyle.status().streaming')
+                stream = report['playback']['streaming']
+                assert stream['playedFrames'] == 210*48000, stream
+                assert stream['underruns'] == 0 and stream['discontinuities'] == 0, stream
+                assert stream['peakQueuedFrames'] <= 24576, stream
                 transitions = report['playback']['transitions']
                 assert [t['index'] for t in transitions] == list(range(11)), transitions
                 errors = [t['time']-scene_data[t['index']]['start'] for t in transitions]
@@ -192,7 +207,7 @@ def main():
     finally:
         server.shutdown()
         server.server_close()
-    (output/'report.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
+    (output/'report.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8', newline='\n')
     maximum = max(f['native_rgb_mae_255'] for f in report['frames'])
     lines = ['# WebGL parity validation', '',
              f'Browser: {args.browser} {report["browser_version"]}. Captures: 640x480, no antialiasing.', '',
@@ -200,8 +215,9 @@ def main():
              f'Maximum sampled native/WebGL RGB MAE: **{maximum:.4f} / 255**. Acceptance threshold: 0.5.', '',
              f'Native motion oracle: {report["motion"]["samples"]} times, {report["motion"]["values"]} matrix components; '
              f'maximum error {report["motion"]["maxError"]:.8f}.', '',
-             'All 20,160,000 decoded PCM16 sample values match the native WAV export by SHA-256. '
-             'The native live mixer uses float PCM; the WAV introduces 16-bit quantization.', '',
+             'The original XM is decoded by libxm v0.2 in WebAssembly and streamed through an AudioWorklet. '
+             'No WAV is fetched. Offline QA converts the generated float samples to PCM16: all 20,160,000 '
+             'values match the native export by SHA-256. Live playback retains float samples.', '',
              'Reverse-order captures, scene boundaries, gesture play, pause, seek, restart, mute, PNG download, '
              'fullscreen, pending-play cancellation and rapid seeks passed.', '',
              '| Demo time | Native/WebGL MAE | Video/WebGL MAE |', '|---:|---:|---:|']
@@ -218,10 +234,13 @@ def main():
         lines += ['', f'Full audio-clock playback completed all 11 scenes in {p["wall_seconds"]:.2f} wall seconds. '
                   f'Maximum observed cut delay: {p["maximum_cut_delay_seconds"]:.4f} s. '
                   f'Mean frame interval: {p["frameIntervalMs"]["mean"]:.2f} ms; p95: {p["frameIntervalMs"]["p95"]:.2f} ms.']
+        lines += ['', f'Audio stream: {p["streaming"]["playedFrames"]} stereo frames consumed; '
+                  f'{p["streaming"]["underruns"]} underruns; {p["streaming"]["discontinuities"]} discontinuities. '
+                  f'Peak queued audio: {p["streaming"]["peakQueuedFrames"]/48000:.3f} seconds.']
     lines += ['', 'These measurements establish parity with the native reconstruction on the tested browser/GPU, '
               'not exact reproduction of the original 1999/2000 renderer or universal GPU pixel identity. '
               'See report.json for versions, input/output hashes and warnings.']
-    (output/'REPORT.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
+    (output/'REPORT.md').write_text('\n'.join(lines)+'\n', encoding='utf-8', newline='\n')
     print(output/'REPORT.md', flush=True)
 
 

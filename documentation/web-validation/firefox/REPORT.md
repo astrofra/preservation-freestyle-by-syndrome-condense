@@ -8,7 +8,7 @@ Maximum sampled native/WebGL RGB MAE: **0.0238 / 255**. Acceptance threshold: 0.
 
 Native motion oracle: 292 times, 125808 matrix components; maximum error 0.00012008.
 
-All 20,160,000 decoded PCM16 sample values match the native WAV export by SHA-256. The native live mixer uses float PCM; the WAV introduces 16-bit quantization.
+The original XM is decoded by libxm v0.2 in WebAssembly and streamed through an AudioWorklet. No WAV is fetched. Offline QA converts the generated float samples to PCM16: all 20,160,000 values match the native export by SHA-256. Live playback retains float samples.
 
 Reverse-order captures, scene boundaries, gesture play, pause, seek, restart, mute, PNG download, fullscreen, pending-play cancellation and rapid seeks passed.
 

@@ -1,0 +1,290 @@
+{
+  "reference_sha256": "46a3ad220b2f3e44c40465621e870cebfc62880d450e6064a9ef740fe61364d9",
+  "executable_sha256": "08da019993564eea7255357ed5bb38bf6cfdaea626ab71ed316b1c7abac3d550",
+  "reference_video_scale": 0.996595135365128,
+  "reference_video_offset": 0.02394646540968619,
+  "timing_observations": [
+    {
+      "demo_seconds": 37,
+      "video_seconds": 36.933333,
+      "scene": "2_LogoFREESTYLE.lws"
+    },
+    {
+      "demo_seconds": 45,
+      "video_seconds": 44.85,
+      "scene": "3_Colline.lws"
+    },
+    {
+      "demo_seconds": 96,
+      "video_seconds": 95.716667,
+      "scene": "5_ChampiGIRLgfx.lws"
+    },
+    {
+      "demo_seconds": 103,
+      "video_seconds": 102.616667,
+      "scene": "55_ToTheManor.lws"
+    },
+    {
+      "demo_seconds": 131,
+      "video_seconds": 130.583333,
+      "scene": "6_HOUSEofTHEkitCH.lws"
+    },
+    {
+      "demo_seconds": 147,
+      "video_seconds": 146.533333,
+      "scene": "7_TheTRAP!.lws"
+    },
+    {
+      "demo_seconds": 200,
+      "video_seconds": 199.35,
+      "scene": "9_SyndromeFINAL.lws"
+    }
+  ],
+  "maximum_raw_cut_error_seconds": 0.6500000000000057,
+  "maximum_fitted_cut_residual_seconds": 0.05657840801785596,
+  "caveat": "Fit only aligns comparison frames. Playback uses the executable's absolute timing. Report raw timing differences too. Video cut drift and audio alignment differ; the reference capture's exact clock behavior is unknown.",
+  "frames": [
+    {
+      "file": "frame_000000_000005000ms.png",
+      "demo_seconds": "5.000000",
+      "scene": "0_sceneTunnelAnim.lws",
+      "scene_frame": "106.000000",
+      "reference_seconds": 5.006922142235326,
+      "rgb_mae_255": 11.685692274305556,
+      "rgb_rmse_255": 26.50530750538203,
+      "sha256": "f64480e405252462f90746807c2d92fbf3890c141c2fdb1762043bbdd1171b4c"
+    },
+    {
+      "file": "frame_000001_000015000ms.png",
+      "demo_seconds": "15.000000",
+      "scene": "0_sceneTunnelAnim.lws",
+      "scene_frame": "316.000000",
+      "reference_seconds": 14.972873495886606,
+      "rgb_mae_255": 13.227408854166667,
+      "rgb_rmse_255": 39.22159579095283,
+      "sha256": "6ac0e76595150e5244cccd3e09044cf3b2bee9797fc4e7a3e883776b88694f39"
+    },
+    {
+      "file": "frame_000002_000023000ms.png",
+      "demo_seconds": "23.000000",
+      "scene": "0_sceneTunnelAnim.lws",
+      "scene_frame": "484.000000",
+      "reference_seconds": 22.94563457880763,
+      "rgb_mae_255": 4.9924110243055555,
+      "rgb_rmse_255": 15.53184320072172,
+      "sha256": "ecd1ba8d80f613c0071a0e475d83a916611ec3061dc3990e3a55303c0c36c2b6"
+    },
+    {
+      "file": "frame_000003_000027000ms.png",
+      "demo_seconds": "27.000000",
+      "scene": "1_ZomBie.lws",
+      "scene_frame": "91.000000",
+      "reference_seconds": 26.932015120268144,
+      "rgb_mae_255": 7.128063151041666,
+      "rgb_rmse_255": 20.67030343820406,
+      "sha256": "8bc658477b0e7f1ce5e7aa2f3b660c89f608329668c68ce4582421d88c15799c"
+    },
+    {
+      "file": "frame_000004_000034000ms.png",
+      "demo_seconds": "34.000000",
+      "scene": "1_ZomBie.lws",
+      "scene_frame": "301.000000",
+      "reference_seconds": 33.90818106782404,
+      "rgb_mae_255": 4.983468967013889,
+      "rgb_rmse_255": 16.219503200504647,
+      "sha256": "ed73a7443bfd9e6722ac4ffd8c49015d65e34b38d6756a3ca16a9b7386e4e16b"
+    },
+    {
+      "file": "frame_000005_000040000ms.png",
+      "demo_seconds": "40.000000",
+      "scene": "2_LogoFREESTYLE.lws",
+      "scene_frame": "61.000000",
+      "reference_seconds": 39.887751880014804,
+      "rgb_mae_255": 3.540500217013889,
+      "rgb_rmse_255": 7.675891825786796,
+      "sha256": "8184f84ecc6d775fe46a543d16d43522bfa182005b66c4668ac198b324773cce"
+    },
+    {
+      "file": "frame_000006_000050000ms.png",
+      "demo_seconds": "50.000000",
+      "scene": "3_Colline.lws",
+      "scene_frame": "151.000000",
+      "reference_seconds": 49.85370323366609,
+      "rgb_mae_255": 2.166023220486111,
+      "rgb_rmse_255": 5.888636932421203,
+      "sha256": "ad00c87043d5fd42a117d8a0db87a19389ae34f891c04f3e9104b3a94629bcee"
+    },
+    {
+      "file": "frame_000007_000065000ms.png",
+      "demo_seconds": "65.000000",
+      "scene": "3_Colline.lws",
+      "scene_frame": "601.000000",
+      "reference_seconds": 64.802630264143,
+      "rgb_mae_255": 2.7181260850694446,
+      "rgb_rmse_255": 7.2956852765531135,
+      "sha256": "2af6b5832dfcadd8f9d95832066812e0e3846d6231ce1feed7210544bef59a71"
+    },
+    {
+      "file": "frame_000008_000078000ms.png",
+      "demo_seconds": "78.000000",
+      "scene": "4_SceneChampi.lws",
+      "scene_frame": "226.000000",
+      "reference_seconds": 77.75836702388966,
+      "rgb_mae_255": 4.851974826388889,
+      "rgb_rmse_255": 10.010667270536409,
+      "sha256": "b8b9a10bdd943353e9bc6f5416d71543863294a64c5834827ed604b5cbf72e56"
+    },
+    {
+      "file": "frame_000009_000086000ms.png",
+      "demo_seconds": "86.000000",
+      "scene": "4_SceneChampi.lws",
+      "scene_frame": "586.000000",
+      "reference_seconds": 85.73112810681069,
+      "rgb_mae_255": 7.7904275173611115,
+      "rgb_rmse_255": 27.810431453975145,
+      "sha256": "e759d52b9ae64f43f4b63fad5657d0fcb603e326ba9b7d86461ffec282033680"
+    },
+    {
+      "file": "frame_000010_000093000ms.png",
+      "demo_seconds": "93.000000",
+      "scene": "4_SceneChampi.lws",
+      "scene_frame": "901.000000",
+      "reference_seconds": 92.70729405436659,
+      "rgb_mae_255": 28.978384331597223,
+      "rgb_rmse_255": 59.14409471694662,
+      "sha256": "aae1820b8cb9a0f4d27b82b913130e7441735f6dc3421f01069de8d877ce4a01"
+    },
+    {
+      "file": "frame_000011_000099000ms.png",
+      "demo_seconds": "99.000000",
+      "scene": "5_ChampiGIRLgfx.lws",
+      "scene_frame": "46.000000",
+      "reference_seconds": 98.68686486655736,
+      "rgb_mae_255": 2.6847493489583334,
+      "rgb_rmse_255": 4.553847269792568,
+      "sha256": "cc393d2933245a0d0764b72b8862a1f2083dd3bce309b2a9076e60ba41155cc6"
+    },
+    {
+      "file": "frame_000012_000110000ms.png",
+      "demo_seconds": "110.000000",
+      "scene": "55_ToTheManor.lws",
+      "scene_frame": "211.000000",
+      "reference_seconds": 109.64941135557376,
+      "rgb_mae_255": 4.791376953125,
+      "rgb_rmse_255": 11.86559957785589,
+      "sha256": "d9689500dc91a0b05de612cdfeb309149ed31435975c570cec79e1bb329c63a0"
+    },
+    {
+      "file": "frame_000013_000120000ms.png",
+      "demo_seconds": "120.000000",
+      "scene": "55_ToTheManor.lws",
+      "scene_frame": "511.000000",
+      "reference_seconds": 119.61536270922504,
+      "rgb_mae_255": 2.2496017795138887,
+      "rgb_rmse_255": 7.949360602235566,
+      "sha256": "495a78d6c13a9af360091c20176750b4c54812d9a0911675b0c83be1de534db8"
+    },
+    {
+      "file": "frame_000014_000136000ms.png",
+      "demo_seconds": "136.000000",
+      "scene": "6_HOUSEofTHEkitCH.lws",
+      "scene_frame": "151.000000",
+      "reference_seconds": 135.5608848750671,
+      "rgb_mae_255": 3.7356922743055554,
+      "rgb_rmse_255": 8.544563406171397,
+      "sha256": "2fcc0aaab1fa22ef689269189341d747584294e65e6a4d2ce277667046451be1"
+    },
+    {
+      "file": "frame_000015_000143000ms.png",
+      "demo_seconds": "143.000000",
+      "scene": "6_HOUSEofTHEkitCH.lws",
+      "scene_frame": "361.000000",
+      "reference_seconds": 142.537050822623,
+      "rgb_mae_255": 2.1502810329861113,
+      "rgb_rmse_255": 6.690617539826658,
+      "sha256": "f9a1569d153a5071f9665a160f1f6c2f91b5e416515fa5c471461964578fa5a8"
+    },
+    {
+      "file": "frame_000016_000153000ms.png",
+      "demo_seconds": "153.000000",
+      "scene": "7_TheTRAP!.lws",
+      "scene_frame": "181.000000",
+      "reference_seconds": 152.50300217627426,
+      "rgb_mae_255": 2.5709266493055556,
+      "rgb_rmse_255": 6.431345831269602,
+      "sha256": "5321762ff365faa514e3b2126cbbd170ef5d5f0e5788b7104557601347789b6c"
+    },
+    {
+      "file": "frame_000017_000162000ms.png",
+      "demo_seconds": "162.000000",
+      "scene": "7_TheTRAP!.lws",
+      "scene_frame": "451.000000",
+      "reference_seconds": 161.47235839456042,
+      "rgb_mae_255": 2.685857204861111,
+      "rgb_rmse_255": 6.900227860820975,
+      "sha256": "735e9fbeec38dd4def9c8a719f1cac8076f1bae1074731f403cb54caf9947c4e"
+    },
+    {
+      "file": "frame_000018_000172000ms.png",
+      "demo_seconds": "172.000000",
+      "scene": "8_Wgon.lws",
+      "scene_frame": "151.000000",
+      "reference_seconds": 171.4383097482117,
+      "rgb_mae_255": 0.7339659288194444,
+      "rgb_rmse_255": 4.556454923184678,
+      "sha256": "c92468a69ccd7b7b4fc1df18f545a0c6be356ab9d26c8cd2049c76cfbb0bec1b"
+    },
+    {
+      "file": "frame_000019_000183000ms.png",
+      "demo_seconds": "183.000000",
+      "scene": "8_Wgon.lws",
+      "scene_frame": "481.000000",
+      "reference_seconds": 182.4008562372281,
+      "rgb_mae_255": 1.9036773003472223,
+      "rgb_rmse_255": 7.050520429347948,
+      "sha256": "ddbd98adf1cf099aecf8e8d80c29bceb1bc732ec526248b307eb5dc9907905ee"
+    },
+    {
+      "file": "frame_000020_000192000ms.png",
+      "demo_seconds": "192.000000",
+      "scene": "8_Wgon.lws",
+      "scene_frame": "751.000000",
+      "reference_seconds": 191.37021245551426,
+      "rgb_mae_255": 2.5113020833333333,
+      "rgb_rmse_255": 6.587683820964695,
+      "sha256": "97f00df31df0b9f093c8dc959cef8c658699a2feb09918fb12e522038dbda041"
+    },
+    {
+      "file": "frame_000021_000204000ms.png",
+      "demo_seconds": "204.000000",
+      "scene": "9_SyndromeFINAL.lws",
+      "scene_frame": "121.000000",
+      "reference_seconds": 203.3293540798958,
+      "rgb_mae_255": 2.7019281684027776,
+      "rgb_rmse_255": 6.900700620503649,
+      "sha256": "52b91b589a1553f8c0770e0ae12d30f00341a5c4dd7b0dc7dc6ca4b609e742cf"
+    }
+  ],
+  "audio": [
+    {
+      "video_seconds": 15,
+      "xm_minus_reference_seconds": 0.0,
+      "envelope_correlation": 0.9138495922088623
+    },
+    {
+      "video_seconds": 60,
+      "xm_minus_reference_seconds": 0.02,
+      "envelope_correlation": 0.8651393055915833
+    },
+    {
+      "video_seconds": 120,
+      "xm_minus_reference_seconds": 0.04,
+      "envelope_correlation": 0.7991352677345276
+    },
+    {
+      "video_seconds": 180,
+      "xm_minus_reference_seconds": 0.05,
+      "envelope_correlation": 0.9197424054145813
+    }
+  ]
+}

@@ -8,16 +8,31 @@ Asset extraction for **FreeStyle**, a Win32 demo by Condense / Syndrome
 (2000), coded by xBaRr. The distribution files are preserved in
 `demo-releases/` and `demo-unpack/`.
 
+## Attemps to reimplement the demo
+
+- Using : https://github.com/astrofra/preservation-nxng-engine
+
+## Playable reconstruction
+
+Launch **`bin/freestyle.exe`** to replay the eleven original animated scenes with
+the converted XM soundtrack. The player builds with CMake and vendored sources,
+uses portable OpenGL/audio backends, and supports seeking and deterministic PNG capture.
+
+See the [player/build guide](documentation/PLAYER.md),
+[restoration journal](documentation/RESTORATION_LOG.md), and
+[visual and timing comparison](documentation/validation/REPORT.md).
+Windows x64 is verified; native macOS/Linux validation remains outstanding.
+
 ## Building on Windows
 
-All you need is CMake 3.15 or later and Visual Studio with the C/C++ tools:
+All you need is CMake 3.21 or later and Visual Studio with the C/C++ tools:
 
 ```powershell
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64
 cmake --build build --config Release
 ```
 
-The output is **`bin/klx_unpack.exe`**. As in
+The outputs are **`bin/freestyle.exe`** and **`bin/klx_unpack.exe`**. As in
 `preservation-hcl-demos`, the extractor fits in a single C99 file, uses
 `/W4 /WX` with MSVC, and statically links the C runtime (`/MT`).
 It uses no external libraries: no zlib, Python, or emulator.

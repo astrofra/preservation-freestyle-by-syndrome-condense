@@ -1,0 +1,29 @@
+[
+  {
+    "name": "nxng",
+    "repository": "https://github.com/astrofra/preservation-nxng-engine.git",
+    "commit": "2c0dfc51f8bdd26c75dd3217a35e7afb729dbb9b",
+    "modifications": "None; custom integration is in src/CMakeLists.txt."
+  },
+  {
+    "name": "glfw",
+    "repository": "https://github.com/glfw/glfw.git",
+    "commit": "7b6aead9fb88b3623e3b3725ebb42670cbe4c579",
+    "modifications": "None; custom integration is in src/CMakeLists.txt."
+  },
+  {
+    "name": "libxm",
+    "repository": "https://github.com/artefact2/libxm.git",
+    "commit": "e36ab122a169d451e5f219e1c03724a409a877ba",
+    "modifications": "None; custom integration is in src/CMakeLists.txt."
+  },
+  {
+    "name": "miniaudio",
+    "repository": "https://github.com/mackron/miniaudio",
+    "version": "0.11.23",
+    "files": [
+      "miniaudio.h",
+      "LICENSE"
+    ]
+  }
+]

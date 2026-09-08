@@ -1,5 +1,9 @@
-cmake_minimum_required(VERSION 3.15)
-project(klx_unpack LANGUAGES C)
+cmake_minimum_required(VERSION 3.21)
+project(freestyle_preservation VERSION 0.1.0 LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 add_executable(klx_unpack klx_unpack.c)
 set_target_properties(klx_unpack PROPERTIES
@@ -19,8 +23,21 @@ else()
     endif()
 endif()
 
+option(FREESTYLE_BUILD_PLAYER "Build the portable Freestyle reconstruction" ON)
+if(FREESTYLE_BUILD_PLAYER)
+    add_subdirectory(src)
+endif()
+
 include(CTest)
 if(BUILD_TESTING)
+    if(FREESTYLE_BUILD_PLAYER)
+        add_executable(freestyle_scene_tests tests/scene.cpp)
+        target_link_libraries(freestyle_scene_tests PRIVATE freestyle_scene)
+        add_test(NAME freestyle_motion COMMAND freestyle_scene_tests
+            "${CMAKE_CURRENT_SOURCE_DIR}/demo-assets/cds-freestyle")
+        add_test(NAME freestyle_assets COMMAND freestyle --verify-assets --assets
+            "${CMAKE_CURRENT_SOURCE_DIR}/demo-assets/cds-freestyle")
+    endif()
     find_package(Python3 COMPONENTS Interpreter QUIET)
     if(Python3_Interpreter_FOUND)
         add_test(NAME klx_regression COMMAND "${Python3_EXECUTABLE}"

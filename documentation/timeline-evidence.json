@@ -1,0 +1,138 @@
+{
+  "original_exe_sha256": "7c28c0cfca3016dac73a17d1fcfe9ded7b8b73803055e78ffe9e313874f2447f",
+  "mapped_image_sha256": "232da4f87024be66f949b5c7b2d247507064f88e8e5155408b6e9f0563364322",
+  "input": "emulated original UPX stub",
+  "image_base": "0x400000",
+  "scene_loads": [
+    {
+      "address": "0x00426a46",
+      "scene": "d:/freestyle/0_sceneTunnelAnim.lws"
+    },
+    {
+      "address": "0x00426be1",
+      "scene": "d:/freestyle/1_ZomBie.lws"
+    },
+    {
+      "address": "0x00426d7f",
+      "scene": "d:/freestyle/2_LogoFREESTYLE.lws"
+    },
+    {
+      "address": "0x00427b3a",
+      "scene": "d:/freestyle/3_colline.lws"
+    },
+    {
+      "address": "0x00427cc1",
+      "scene": "d:/freestyle/4_SceneChampi.lws"
+    },
+    {
+      "address": "0x00427e5c",
+      "scene": "d:/freestyle/5_ChampiGIRLgfx.lws"
+    },
+    {
+      "address": "0x004288f6",
+      "scene": "d:/freestyle/55_tothemanor.lws"
+    },
+    {
+      "address": "0x00428a59",
+      "scene": "d:/freestyle/6_HOUSEofTHEkitCH.lws"
+    },
+    {
+      "address": "0x00428b88",
+      "scene": "d:/freestyle/7_thetrap!.lws"
+    },
+    {
+      "address": "0x00428e62",
+      "scene": "d:/freestyle/8_wgon.lws"
+    },
+    {
+      "address": "0x00428ec7",
+      "scene": "d:/freestyle/9_syndromeFINAL.lws"
+    }
+  ],
+  "timing_comparisons": [
+    {
+      "address": "0x0042744c",
+      "milliseconds": 24000,
+      "bytes": "3dc05d0000",
+      "instruction": "cmp eax, 0x5dc0"
+    },
+    {
+      "address": "0x00427662",
+      "milliseconds": 37000,
+      "bytes": "3d88900000",
+      "instruction": "cmp eax, 0x9088"
+    },
+    {
+      "address": "0x00427875",
+      "milliseconds": 39000,
+      "bytes": "3d58980000",
+      "instruction": "cmp eax, 0x9858"
+    },
+    {
+      "address": "0x00428056",
+      "milliseconds": 45000,
+      "bytes": "3dc8af0000",
+      "instruction": "cmp eax, 0xafc8"
+    },
+    {
+      "address": "0x0042814f",
+      "milliseconds": 73000,
+      "bytes": "3d281d0100",
+      "instruction": "cmp eax, 0x11d28"
+    },
+    {
+      "address": "0x0042837d",
+      "milliseconds": 96000,
+      "bytes": "3d00770100",
+      "instruction": "cmp eax, 0x17700"
+    },
+    {
+      "address": "0x0042864b",
+      "milliseconds": 97500,
+      "bytes": "3ddc7c0100",
+      "instruction": "cmp eax, 0x17cdc"
+    },
+    {
+      "address": "0x00428c3e",
+      "milliseconds": 103000,
+      "bytes": "3d58920100",
+      "instruction": "cmp eax, 0x19258"
+    },
+    {
+      "address": "0x00428c7d",
+      "milliseconds": 131000,
+      "bytes": "3db8ff0100",
+      "instruction": "cmp eax, 0x1ffb8"
+    },
+    {
+      "address": "0x00428cf8",
+      "milliseconds": 147000,
+      "bytes": "3d383e0200",
+      "instruction": "cmp eax, 0x23e38"
+    },
+    {
+      "address": "0x00428d73",
+      "milliseconds": 166000,
+      "bytes": "3d70880200",
+      "instruction": "cmp eax, 0x28870"
+    },
+    {
+      "address": "0x00428f2d",
+      "milliseconds": 167000,
+      "bytes": "3d588c0200",
+      "instruction": "cmp eax, 0x28c58"
+    },
+    {
+      "address": "0x00428f69",
+      "milliseconds": 200000,
+      "bytes": "3d400d0300",
+      "instruction": "cmp eax, 0x30d40"
+    },
+    {
+      "address": "0x00428fd0",
+      "milliseconds": 210000,
+      "bytes": "3d50340300",
+      "instruction": "cmp eax, 0x33450"
+    }
+  ]
+}

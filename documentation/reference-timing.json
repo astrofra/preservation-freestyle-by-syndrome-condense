@@ -1,0 +1,15 @@
+{
+  "reference": "video-reference/freestyle-reference.mkv",
+  "video_fps": 60,
+  "method": "Observable scene cuts located using frame differences at 64x48, then checked against the montage; times quantized to one 60 Hz frame.",
+  "observations": [
+    {"demo_seconds": 37, "video_seconds": 36.933333, "scene": "2_LogoFREESTYLE.lws"},
+    {"demo_seconds": 45, "video_seconds": 44.850000, "scene": "3_Colline.lws"},
+    {"demo_seconds": 96, "video_seconds": 95.716667, "scene": "5_ChampiGIRLgfx.lws"},
+    {"demo_seconds": 103, "video_seconds": 102.616667, "scene": "55_ToTheManor.lws"},
+    {"demo_seconds": 131, "video_seconds": 130.583333, "scene": "6_HOUSEofTHEkitCH.lws"},
+    {"demo_seconds": 147, "video_seconds": 146.533333, "scene": "7_TheTRAP!.lws"},
+    {"demo_seconds": 200, "video_seconds": 199.350000, "scene": "9_SyndromeFINAL.lws"}
+  ],
+  "warning": "Fit only aligns comparison frames. Playback uses the executable's absolute timing. Report raw timing differences too. Video cut drift and audio alignment differ; the reference capture's exact clock behavior is unknown."
+}

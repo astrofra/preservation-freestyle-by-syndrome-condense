@@ -23,6 +23,15 @@ set_target_properties(freestyle_xm PROPERTIES C_STANDARD 11)
 add_library(freestyle_scene STATIC scene.cpp lwob.cpp)
 target_include_directories(freestyle_scene PUBLIC .)
 add_executable(freestyle main.cpp renderer.cpp audio.cpp)
+add_executable(freestyle_export_web export_web.cpp)
+target_include_directories(freestyle_export_web PRIVATE ../vendor/nxng/restoration/third_party)
+target_link_libraries(freestyle_export_web PRIVATE freestyle_scene)
+set_target_properties(freestyle_export_web PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin$<0:>")
+if(MSVC)
+    target_compile_options(freestyle_export_web PRIVATE /W4 /utf-8)
+    target_compile_definitions(freestyle_export_web PRIVATE _CRT_SECURE_NO_WARNINGS)
+endif()
 target_include_directories(freestyle PRIVATE
     ../vendor/nxng/restoration/third_party ../vendor/miniaudio)
 target_link_libraries(freestyle PRIVATE freestyle_scene freestyle_xm

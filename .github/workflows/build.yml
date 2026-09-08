@@ -17,3 +17,24 @@ jobs:
       - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build build --config Release --parallel
       - run: ctest --test-dir build -C Release --output-on-failure
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y xorg-dev libgl1-mesa-dev xvfb
+      - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build --target freestyle_web --parallel
+      - run: python -m pip install playwright==1.62.0 pillow numpy
+      - run: python -m playwright install --with-deps chromium
+      - run: xvfb-run -a python tools/validate_web.py --exe bin/freestyle --output captures/web-ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: freestyle-web
+          path: |
+            dist/freestyle-web.zip
+            captures/web-ci/REPORT.md
+            captures/web-ci/report.json
+            captures/web-ci/comparison.jpg

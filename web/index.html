@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0b10">
+  <title>Freestyle — Condense / Syndrome</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header><h1>Freestyle</h1><p>Condense / Syndrome</p></header>
+    <div id="stage">
+      <canvas id="demo" width="640" height="480" aria-label="Freestyle demo"></canvas>
+      <div id="intro">
+        <p id="message" role="status">Loading Freestyle…</p>
+        <progress id="loading" max="1" value="0" aria-label="Loading progress"></progress>
+        <button id="start" disabled>Play demo</button>
+      </div>
+    </div>
+    <nav aria-label="Playback controls">
+      <button id="play" disabled aria-label="Play or pause">Play</button>
+      <button id="restart" disabled aria-label="Restart demo">↶</button>
+      <output id="time" aria-live="off">0:00 / 3:30</output>
+      <input id="seek" aria-label="Demo time" type="range" min="0" max="210" step="0.001" value="0" disabled>
+      <button id="mute" disabled aria-pressed="false">Mute</button>
+      <button id="capture" disabled>PNG</button>
+      <button id="fullscreen" disabled aria-label="Toggle fullscreen">⛶</button>
+    </nav>
+    <p class="help">Space: pause · ← →: seek · Home: restart · F: fullscreen · C: capture</p>
+    <p id="error" role="alert" hidden></p>
+    <footer>JavaScript / WebGL preservation · Original artwork and music by their respective authors</footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

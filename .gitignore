@@ -6,3 +6,6 @@ __pycache__/
 /captures/
 /dist/
 /video-reference/freestyle-reference.mkv
+/web/assets/
+/bin/freestyle_export_web.exe
+.DS_Store

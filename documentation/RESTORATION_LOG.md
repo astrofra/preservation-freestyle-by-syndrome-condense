@@ -284,3 +284,140 @@ known; individual execution times were not recorded, so none are invented here.
   milestone is complete; no unresolved build or playback blocker remains on
   the tested Windows host. The visual limitations and untested native platforms
   listed above remain explicit follow-up work.
+
+## 2026-09-08 17:21 — JavaScript/WebGL port started
+
+- User requested a JavaScript/WebGL version with parity to the native player;
+  Three.js is permitted but optional. Interpreted "ISO" as audiovisual and
+  functional parity with this native reconstruction, whose remaining differences
+  from the original release are already documented above.
+- Inspected the current native scene, mesh, renderer and audio implementations.
+  The previous delivery is now committed. Left the user's untracked `.DS_Store`
+  and `documentation/RESTORATION_LOG.pdf` untouched.
+- Chose direct WebGL 2 with small shaders to reproduce the existing fixed-function
+  OpenGL behavior. The asset preparation step will reuse the C++ loader, exporting
+  geometry, UVs, normals and animation keys; JavaScript will evaluate motions and
+  render actual geometry. No reference-video playback is involved.
+- Plan audio parity through a lossless export of the same libxm-decoded XM used
+  by the native player, scheduled against the Web Audio clock. A browser launch
+  button is required to unlock audio. Seek, pause and exact-time captures remain
+  part of the port.
+- Consulted Khronos WebGL 2 documentation (NPOT repeat textures, shader API) and
+  MDN's AudioBufferSourceNode start/offset documentation. WebGL 2 avoids WebGL 1's
+  restrictions on repeating non-power-of-two textures.
+- No Node/npm, Emscripten or Playwright installation was found on PATH. Installed
+  Playwright 1.62.0 and its dependencies into ignored `analysis/web-python-deps/`
+  for browser validation. Pip succeeded but printed unrelated conflicts already
+  present among globally installed lmdeploy/outlines/ollama-python dependencies;
+  this target-directory installation did not modify those packages.
+- Started downloading Playwright's Chromium into ignored `analysis/web-browsers/`.
+  No blocker at this stage.
+
+## 2026-09-08 17:35 — Browser renderer working; first parity measurements
+
+- Added the CMake target freestyle_export_web. Two initial tool-script attempts
+  failed before execution: first JavaScript string quoting, then accidental
+  interpolation of a CMake variable in a JavaScript template string. Neither
+  modified files. Corrected tool quoting and built successfully without warnings.
+- Exported 11 scenes, 61 meshes and 69 textures. Scene JSON is 2,515,500 bytes;
+  the native motion oracle is 1,099,839 bytes. Textures use the same stb decoder
+  and lossless PNG, avoiding browser JPEG decoder differences.
+- Implemented JavaScript TCB interpolation, object/camera matrices, parent
+  hierarchies, timeline holds, and the native particle PRNG/aging formula.
+  Implemented WebGL 2 vertex lighting, texture modes, reflection approximation,
+  transparent triangle sorting, additive sprites and deterministic PNG capture.
+- Exported Mush.xm through the unchanged native libxm decoder to a 210-second,
+  48 kHz stereo PCM16 WAV. This is the native capture interface's WAV; the native
+  live mixer uses float PCM. PCM16 quantization is explicit, not a claim of
+  bit-identical float output.
+- Added static HTML controls for audio unlock, play/pause, seek, restart, mute,
+  fullscreen and PNG capture. Web Audio supplies the clock. Runtime uses
+  JavaScript and shaders, without Three.js, npm, WASM or a native executable.
+- Chromium installation succeeded. Launched a loopback-only test server and
+  tested in headless Chromium. No JavaScript or WebGL errors. Chromium reports
+  GPU-stall warnings for capture readback, which necessarily synchronizes the GPU.
+- Compared six first-pass WebGL images with native captures: RGB MAE / 255 was
+  0.08009 at 5 s, 0.03088 at 50 s, 0.10480 at 93 s, 0.02847 at 120 s,
+  0.05459 at 153 s and 0.03161 at 183 s. Visually inspected the contact sheet.
+  Evidence: ignored analysis/web-first/.
+- Compared 292 fractional timeline samples against 125,808 native matrix
+  components. Maximum component error was 0.00012008 (about one float ULP at
+  the worst large translation); maximum frame error was 4.55e-13. First pass
+  succeeded without renderer fixes.
+- Added tools/build_web.py to prepare a static site and optional ZIP with
+  licenses and hashes. One combined patch was rejected because the journal
+  context had different indentation; no files changed. Corrected and reapplied.
+- Next: all reference timestamps, sound sample identity, controls and full playback.
+
+## 2026-09-08 17:46 — Full browser validation and interaction correction
+
+- Added tools/validate_web.py. It starts/stops an isolated loopback HTTP server,
+  renders fresh native captures, checks browser captures and reversed capture
+  order, compares all native motion samples, hashes the complete decoded audio,
+  and exercises actual browser controls. Optional video comparison reuses the
+  measured reference clock calibration. Optional full playback records frame
+  timing and scene changes.
+- Chromium 151.0.7922.34 passed all initial checks. Enforced user-gesture audio
+  policy: its initial AudioContext was suspended, and clicking Play unlocked it.
+  All 20,160,000 PCM16 values match the WAV export; PCM SHA-256:
+  ebee873c3c27b8141319263facc4e69b1bccc6849475104757e17dd170d1979c.
+- All 22 native/browser image pairs passed. Maximum RGB MAE was 0.116913 / 255.
+  Also directly compared all 22 browser images against the remuxed video using
+  the existing affine fit. Raw video cut drift is retained in the report.
+- Full Chromium audio-clock playback completed: all eleven scenes, exactly
+  210 seconds on the playback clock, 210.485 wall seconds including end polling.
+  Maximum observed cut delay was 8 ms. Mean render CPU time was 1.72 ms;
+  mean frame interval 17.30 ms, p95 24.30 ms. These are measurements on this host.
+- Installed Firefox 153.0 into the ignored local browser directory. It passed
+  image, motion, audio, deterministic-order and control checks. Its maximum
+  sampled native/browser RGB MAE was 0.023801 / 255.
+- Checked fullscreen entry/exit and a 390x844 responsive viewport. No JavaScript
+  errors or horizontal overflow. Captured the interface for inspection.
+- That interface inspection exposed a race: a pending asynchronous audio resume
+  could complete after an immediate pause/capture and start playback again.
+  Added request generations and explicit playback intent to AudioClock so pause
+  cancels pending resumes and rapid seeks retain only the latest request.
+  Added regression checks for both interactions. Also synchronized the mute
+  button label/ARIA state when the optional mute query is used.
+- Added the freestyle_web CMake target, packaging guide, README entry, and an
+  optional Linux/Chromium CI validation job. The CI workflow has not run remotely.
+- Built the freestyle_web target successfully. It produced a self-contained
+  site and CRC-verified ZIP (approximately 37 MB; PCM audio is the largest file).
+  The browser source is included without bundling/minification.
+- Re-running browser validation, including full Chromium playback, after the
+  interaction fix so delivery provenance refers to the final JavaScript.
+  No blocker has been encountered.
+
+## 2026-09-08 17:53 — Final WebGL delivery verified
+
+- Re-ran the complete Chromium suite after the audio interaction correction.
+  All nine control checks passed, including pending-play cancellation, rapid
+  consecutive seeks and fullscreen. All 22 image pairs, reversed captures,
+  exact scene boundaries, 292 motion samples and all PCM values passed again.
+- Final full playback completed at exactly 210 seconds on the audio clock.
+  Observed scene starts: 0, 24, 37, 45, 73, 96, 103, 131, 147, 167.010667,
+  200.010667 seconds. Maximum observed cut delay: 10.667 ms.
+  Mean render time: 1.762 ms; mean frame interval: 17.368 ms; p95: 24.400 ms.
+  End polling completed after 210.469 wall seconds.
+- Re-ran the final Firefox suite, including the new interaction and fullscreen
+  checks. All passed. Maximum sampled RGB MAE remains 0.116913 / 255 in Chromium
+  and 0.023801 / 255 in Firefox. No JavaScript/WebGL errors were recorded.
+- Refreshed screenshots after the correction and explicitly verified that
+  capturing immediately after Play stays paused at the requested timestamp.
+  Responsive screenshots and contact sheets are in documentation/web-validation/.
+- Re-ran the native CTest suite after CMake integration: all three tests pass.
+  Python preparation/validation/packaging scripts compile; git diff --check passes.
+- Final CMake preparation and ZIP packaging succeeded. The web ZIP is about
+  37 MB and includes the complete readable JavaScript runtime, generated assets,
+  soundtrack, guide, provenance manifest and licenses. WAV/geometry generation
+  is reproducible from the native source and original extracted assets.
+- Checked every runtime and generated-asset hash inside the ZIP. Confirmed both
+  browser reports contain the exact final site's provenance manifest. The live
+  preview at http://127.0.0.1:8765 serves the same runtime source bytes.
+- Source packaging now includes the WebGL sources and preparation tools, while
+  excluding generated web assets and intermediate browser/native PNG captures.
+  Refreshing the full source ZIP incorporates this final journal entry.
+- Native Safari/macOS and mobile hardware are untested. Pixel identity across
+  all GPUs is not asserted. The port retains the native reconstruction's known
+  original-release fidelity limits and explicit float-to-PCM16 quantization.
+  No blocking issue remains for the delivered Windows browser build.

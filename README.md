@@ -23,6 +23,22 @@ See the [player/build guide](documentation/PLAYER.md),
 [visual and timing comparison](documentation/validation/REPORT.md).
 Windows x64 is verified; native macOS/Linux validation remains outstanding.
 
+## JavaScript / WebGL version
+
+The browser player preserves the native reconstruction's scene order, animation,
+materials, particles and audio timeline. All runtime code is readable JavaScript,
+with WebGL 2 and Web Audio; no npm installation or CDN is needed.
+
+After the CMake build:
+
+    python tools/build_web.py --package
+    python -m http.server 8000 --bind 127.0.0.1 --directory dist/freestyle-web
+
+Open http://127.0.0.1:8000 and click Play demo. The generated
+dist/freestyle-web.zip is ready for any static web host.
+See the [WebGL guide](documentation/WEB_PLAYER.md) and
+[native/browser parity report](documentation/web-validation/chromium/REPORT.md).
+
 ## Building on Windows
 
 All you need is CMake 3.21 or later and Visual Studio with the C/C++ tools:

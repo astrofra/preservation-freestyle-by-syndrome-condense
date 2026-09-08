@@ -28,6 +28,15 @@ if(FREESTYLE_BUILD_PLAYER)
     add_subdirectory(src)
 endif()
 
+find_package(Python3 COMPONENTS Interpreter QUIET)
+if(FREESTYLE_BUILD_PLAYER AND Python3_Interpreter_FOUND)
+    add_custom_target(freestyle_web
+        COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tools/build_web.py"
+            --bin-dir "$<TARGET_FILE_DIR:freestyle>" --package
+        DEPENDS freestyle freestyle_export_web
+        COMMENT "Preparing the standalone JavaScript/WebGL site")
+endif()
+
 include(CTest)
 if(BUILD_TESTING)
     if(FREESTYLE_BUILD_PLAYER)
@@ -38,7 +47,6 @@ if(BUILD_TESTING)
         add_test(NAME freestyle_assets COMMAND freestyle --verify-assets --assets
             "${CMAKE_CURRENT_SOURCE_DIR}/demo-assets/cds-freestyle")
     endif()
-    find_package(Python3 COMPONENTS Interpreter QUIET)
     if(Python3_Interpreter_FOUND)
         add_test(NAME klx_regression COMMAND "${Python3_EXECUTABLE}"
             "${CMAKE_CURRENT_SOURCE_DIR}/tests/unpack.py" "$<TARGET_FILE:klx_unpack>")

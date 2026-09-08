@@ -13,12 +13,13 @@ INSTALL = DIST / 'freestyle-windows-x64'
 SOURCE_ITEMS = [
     '.gitignore', '.github', 'CMakeLists.txt', 'README.md', 'LICENSE',
     'klx_unpack.c', 'src', 'vendor', 'tests', 'tools', 'documentation',
-    'demo-assets', 'demo-releases', 'demo-unpack', 'img',
+    'demo-assets', 'demo-releases', 'demo-unpack', 'img', 'web',
 ]
 EXCLUDED = {
     ROOT / 'documentation/validation/rendered',
     ROOT / 'documentation/validation/mush.wav',
     ROOT / 'documentation/validation/capture.log',
+    ROOT / 'web/assets',
 }
 
 
@@ -27,6 +28,10 @@ def files_under(path):
         if not file.is_file() or any(p in {'.git', '__pycache__'} for p in file.parts):
             continue
         if file.suffix == '.pyc' or any(file == p or p in file.parents for p in EXCLUDED):
+            continue
+        relative = file.relative_to(ROOT)
+        if relative.parts[:2] == ('documentation', 'web-validation') and (
+                'native' in relative.parts[2:] or 'web' in relative.parts[2:] or file.name == 'native.log'):
             continue
         yield file
 

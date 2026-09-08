@@ -519,3 +519,53 @@ known; individual execution times were not recorded, so none are invented here.
 - Direct XM playback is complete on the tested Chromium/Firefox environment.
   The existing unverified Safari/mobile scope remains unchanged. No blocker
   was encountered.
+
+## 2026-09-08 19:04 — Project conversation exported and translated
+
+- The user requested the complete project exchange as JSONL under codex_log/,
+  with a faithful English translation. Located the current session through the
+  local Codex session index, then inspected only session provenance to identify
+  other sessions with this exact project working directory. Found three:
+  September 6 KLX extraction, September 6 repository text translation, and
+  September 8 native restoration/WebGL/direct XM work.
+- Read the source session files without modifying them. Froze the export at
+  the user's export request, 2026-09-08 16:48:22.516 UTC (18:48 local), including
+  that request but excluding this export operation and its delivery response.
+  The source prefixes contain 172, 63 and 772 records respectively.
+- Produced codex_log/project.original.jsonl and project.en.jsonl with one output
+  record per source record: 1,007 records in each. Preserved 777 original records
+  byte for byte, including all 147 tool calls and 147 results. Replaced 224
+  internal instruction/reasoning/context records with explicit omission markers;
+  reduced six session metadata records to provenance fields. This is a complete
+  export of the recovered public exchange and tool traces, not an unfiltered
+  backup of Codex's private runtime state. Every affected source line is listed
+  in manifest.json.
+- Translated all 52 dialogue messages (10 user, 42 assistant), including their
+  duplicated UI events and task-completion copies. Preserved the historical
+  sequence, tentative claims, failures, corrections and former WAV delivery.
+  Commands, patches, tool output, paths, links, identifiers and timestamps remain
+  unchanged. No external translation service was used.
+- Added original and English Markdown reading copies, the English translation
+  mapping, an English scope/provenance README and a standard-library-only
+  export/verification script. Source-prefix hashes and delivered-file hashes
+  are recorded in the manifest. The English Markdown is a transcript, not a
+  retrospective summary.
+- The first attempt to write the translation mapping failed before any file
+  change: Markdown backticks terminated a JavaScript template literal. Encoded
+  those characters as JSON Unicode escapes and applied the file successfully.
+- The first exporter run stopped on app-supplied context split into multiple
+  content blocks. Moved context recognition before the single-dialogue-block
+  check; retained that context in the JSONL and excluded it only from the
+  human-dialogue count. The corrected export completed successfully.
+- Validation passed for all seven manifested files: SHA-256/size checks, JSONL
+  parsing, record ordering/timestamps, all 52 translation entries, literal code
+  and link preservation, and equality of all 294 tool records between languages.
+  Independently compared every unfiltered original record with the source bytes.
+  Both Markdown transcripts contain 52 messages and no Unicode replacement
+  characters. Confirmed that private instruction/reasoning fields are absent
+  from the exported files.
+- Regenerated the frozen snapshot against the still-growing current session:
+  all delivered hashes and the manifest were byte-identical. git diff --check
+  passed after the journal update.
+- This task changes archival documentation only. The demo and its existing
+  packages were not rebuilt. No blocker was encountered.

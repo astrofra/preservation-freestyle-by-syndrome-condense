@@ -9,3 +9,8 @@ __pycache__/
 /web/assets/
 /bin/freestyle_export_web.exe
 .DS_Store
+/codex_log/project.original.jsonl
+/codex_log/project.en.jsonl
+/codex_log/translations.en.json
+/codex_log/manifest.json
+/codex_log/export.py

@@ -1,0 +1,50 @@
+[
+  {
+    "asset": "hg-assetc-win64.zip",
+    "bytes": 9186390,
+    "sha256": "2188f015216c9127166a0be5592c685d6cdafb83d0865e0a005b1d0bfce513e2",
+    "top_entries": [
+      "assetc"
+    ]
+  },
+  {
+    "asset": "hg-assimp_converter-win64.zip",
+    "bytes": 4349598,
+    "sha256": "dcaf1cb9a75dd6b6ccc42d3c95025a0e3dbb99c60143f00fc9257b8226549025",
+    "top_entries": [
+      "assimp_converter"
+    ]
+  },
+  {
+    "asset": "hg-documentation.zip",
+    "bytes": 630607,
+    "sha256": "44c6344782a9ec058e46ee4eddd51ce45679b99d67c618c7e4b34058603229ad",
+    "top_entries": [
+      "documentation"
+    ]
+  },
+  {
+    "asset": "hg-gltf_importer-win64.zip",
+    "bytes": 2031453,
+    "sha256": "c9bd4cf43b2cca85767ed331f281d7353ff9667bc27b555a56460ef9b28e7695",
+    "top_entries": [
+      "gltf_importer"
+    ]
+  },
+  {
+    "asset": "hg-lua_bullet-win64.zip",
+    "bytes": 14402364,
+    "sha256": "c2c7ea995a71d86dc940677776e084cacbf5425c42bc51c33676ac67cd6da072",
+    "top_entries": [
+      "lua_bullet"
+    ]
+  },
+  {
+    "asset": "hg-squirrel_bullet-win64.zip",
+    "bytes": 23784739,
+    "sha256": "fe6c1df7a91bf8525740a69155e84ac0ecc2fc333432f9fd5a384731be9f429d",
+    "top_entries": [
+      "squirrel_bullet"
+    ]
+  }
+]

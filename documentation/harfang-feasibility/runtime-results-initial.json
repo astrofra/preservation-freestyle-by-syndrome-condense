@@ -1,0 +1,136 @@
+[
+  {
+    "language": "lua",
+    "exit_code": 3221226505,
+    "seconds": 3.0292126000858843,
+    "records": [
+      {
+        "language": "Lua",
+        "nodes": 5,
+        "aaa_valid": true
+      },
+      {
+        "api": "BindAnim",
+        "available": false
+      },
+      {
+        "api": "EvaluateBoundAnim",
+        "available": false
+      },
+      {
+        "api": "AddAnim",
+        "available": false
+      },
+      {
+        "api": "GetAnims",
+        "available": false
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "linear_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "step_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "capture": "lua-aaa.png",
+        "frames": 64
+      },
+      {
+        "xm_source": 0,
+        "duration_seconds": 203.102005
+      },
+      {
+        "xm_seek": 0,
+        "accepted": true,
+        "timecode_seconds": 0.382
+      },
+      {
+        "xm_seek": 5,
+        "accepted": false,
+        "timecode_seconds": 0.50175
+      },
+      {
+        "xm_seek": 120,
+        "accepted": false,
+        "timecode_seconds": 0.602187
+      },
+      {
+        "completed": true
+      }
+    ],
+    "log_tail": "ndAnim\",\"available\":false}\r\nPROBE {\"api\":\"AddAnim\",\"available\":false}\r\nPROBE {\"api\":\"GetAnims\",\"available\":false}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.000000,\"parent_x\":0.000000000,\"child_world_x\":0.000000000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.250000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.000000,\"parent_x\":0.000000000,\"child_world_x\":0.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.250000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\n(1263522:416:409:800) Creating texture 'readback' (empty 640x480)\r\nPROBE {\"capture\":\"lua-aaa.png\",\"frames\":64}\r\n(1263523:535:852:100) OpenAL ready on device 'OpenAL Soft' - @44100hz\r\nPROBE {\"xm_source\":0,\"duration_seconds\":203.102005}\r\nPROBE {\"xm_seek\":0,\"accepted\":true,\"timecode_seconds\":0.382000}\r\nPROBE {\"xm_seek\":5,\"accepted\":false,\"timecode_seconds\":0.501750}\r\nPROBE {\"xm_seek\":120,\"accepted\":false,\"timecode_seconds\":0.602187}\r\nPROBE {\"completed\":true}\r\n"
+  },
+  {
+    "language": "squirrel",
+    "exit_code": 3221226505,
+    "seconds": 2.8230991000309587,
+    "records": [],
+    "log_tail": "GBA_16.png'\r\n(1263525:369:690:800) Loading texture 'core/noise/LDR_RGBA_17.png'\r\n(1263525:369:774:400) Loading texture 'core/noise/LDR_RGBA_18.png'\r\n(1263525:369:861:100) Loading texture 'core/noise/LDR_RGBA_19.png'\r\n(1263525:369:945:800) Loading texture 'core/noise/LDR_RGBA_20.png'\r\n(1263525:370:030:100) Loading texture 'core/noise/LDR_RGBA_21.png'\r\n(1263525:370:116:200) Loading texture 'core/noise/LDR_RGBA_22.png'\r\n(1263525:370:202:700) Loading texture 'core/noise/LDR_RGBA_23.png'\r\n(1263525:370:287:800) Loading texture 'core/noise/LDR_RGBA_24.png'\r\n(1263525:370:371:400) Loading texture 'core/noise/LDR_RGBA_25.png'\r\n(1263525:370:465:500) Loading texture 'core/noise/LDR_RGBA_26.png'\r\n(1263525:370:551:400) Loading texture 'core/noise/LDR_RGBA_27.png'\r\n(1263525:370:638:800) Loading texture 'core/noise/LDR_RGBA_28.png'\r\n(1263525:370:727:500) Loading texture 'core/noise/LDR_RGBA_29.png'\r\n(1263525:370:814:700) Loading texture 'core/noise/LDR_RGBA_30.png'\r\n(1263525:370:906:300) Loading texture 'core/noise/LDR_RGBA_31.png'\r\n(1263525:370:992:800) Loading texture 'core/noise/LDR_RGBA_32.png'\r\n(1263525:371:079:900) Loading texture 'core/noise/LDR_RGBA_33.png'\r\n(1263525:371:167:600) Loading texture 'core/noise/LDR_RGBA_34.png'\r\n(1263525:371:253:100) Loading texture 'core/noise/LDR_RGBA_35.png'\r\n(1263525:371:339:800) Loading texture 'core/noise/LDR_RGBA_36.png'\r\n(1263525:371:428:300) Loading texture 'core/noise/LDR_RGBA_37.png'\r\n(1263525:371:515:600) Loading texture 'core/noise/LDR_RGBA_38.png'\r\n(1263525:371:604:500) Loading texture 'core/noise/LDR_RGBA_39.png'\r\n(1263525:371:692:200) Loading texture 'core/noise/LDR_RGBA_40.png'\r\n(1263525:371:776:100) Loading texture 'core/noise/LDR_RGBA_41.png'\r\n(1263525:371:861:100) Loading texture 'core/noise/LDR_RGBA_42.png'\r\n(1263525:371:946:30"
+  }
+]

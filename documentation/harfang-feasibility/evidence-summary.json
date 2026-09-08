@@ -1,0 +1,58 @@
+{
+  "target": "astrofra/harfang3d v3.3.0",
+  "source_commit": "2bd99d2ad654f8579b21bfbdcc6ab61f2628ea7a",
+  "release_published_at": "2026-09-06T10:15:12Z",
+  "test_platform": "Windows x64 / Direct3D 11; MSVC 19.41.34120.0",
+  "image_comparison": {
+    "size": [
+      640,
+      480
+    ],
+    "lua_nonblack_bounds": [
+      274,
+      178,
+      456,
+      309
+    ],
+    "squirrel_nonblack_bounds": [
+      274,
+      178,
+      456,
+      309
+    ],
+    "mean_abs_rgb_difference": [
+      3.2552083333333335e-06,
+      6.510416666666667e-06,
+      6.510416666666667e-06
+    ],
+    "max_abs_rgb_difference": [
+      1,
+      1,
+      1
+    ],
+    "scope": "Synthetic camera, lights, simplified materials and motion; transport/AAA evidence only, not original visual conformity."
+  },
+  "binary_build_commits": {
+    "tools": "9d6aeaf19b195ee8266f1aba51d6b5eb5b395baa",
+    "runtimes": "2af58be185bdf94fd5f61ec5e20a05fb1d6cbb46"
+  },
+  "sha256": {
+    "lua-aaa.png": "2f3874fc8dc63219f49a2a9e31d0c35ce9e212ee66ad382cca114306bcee64a7",
+    "squirrel-aaa.png": "4b070cea567a2b818c58f936dbec549ffe2e7f8358ca2f4407669610353e2e4b",
+    "animation-comparison.json": "1fecae28bbf4cc8c8fcde9653b5362d03139a73676883cba5ca748a0d0450534",
+    "runtime-results.json": "ef8f89ffd1ccb920d6b96a8da872836b35bc5a50fbe1f5f7b24592afccebf2d9",
+    "runtime-audio-results.json": "20ce8d8b6c03f2b3e6eda6f03a650493d0d18dec11a8d6f7d41725ffb4913e11"
+  },
+  "raw_asset_inventory": {
+    "lws": 11,
+    "lwo": 64,
+    "moa": 12,
+    "lws_headers": [
+      "LWSC 1"
+    ],
+    "lwo_form_types": [
+      "LWOB"
+    ]
+  },
+  "lightwave_deformation_keyword_lines": []
+}

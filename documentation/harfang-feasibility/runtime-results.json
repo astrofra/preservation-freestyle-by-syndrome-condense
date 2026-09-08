@@ -1,0 +1,218 @@
+[
+  {
+    "language": "lua",
+    "exit_code": 0,
+    "seconds": 1.4022322001401335,
+    "records": [
+      {
+        "language": "Lua",
+        "nodes": 5,
+        "aaa_valid": true
+      },
+      {
+        "api": "BindAnim",
+        "available": false
+      },
+      {
+        "api": "EvaluateBoundAnim",
+        "available": false
+      },
+      {
+        "api": "AddAnim",
+        "available": false
+      },
+      {
+        "api": "GetAnims",
+        "available": false
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "linear_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "step_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "capture": "lua-aaa.png",
+        "frames": 64
+      },
+      {
+        "completed": true
+      }
+    ],
+    "log_tail": "\":\"AddAnim\",\"available\":false}\r\nPROBE {\"api\":\"GetAnims\",\"available\":false}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.000000,\"parent_x\":0.000000000,\"child_world_x\":0.000000000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.250000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.000000,\"parent_x\":0.000000000,\"child_world_x\":0.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.250000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\n(1264137:517:668:800) Creating texture 'capture-color' (empty 640x480)\r\n(1264137:517:685:900) Creating texture 'capture-depth' (empty 640x480)\r\n(1264137:517:708:500) Creating texture 'readback' (empty 640x480)\r\n(1264137:517:774:200) On-request loading pipeline shader program 'core/shader/pbr_var-0_pipe-forward-cfg-0'\r\n(1264137:517:950:200) On-request loading pipeline shader program 'core/shader/pbr_var-0_pipe-forward-cfg-5'\r\nPROBE {\"capture\":\"lua-aaa.png\",\"frames\":64}\r\nPROBE {\"completed\":true}\r\n"
+  },
+  {
+    "language": "squirrel",
+    "exit_code": 0,
+    "seconds": 1.386495100101456,
+    "records": [
+      {
+        "language": "Squirrel",
+        "nodes": 5,
+        "aaa_valid": true
+      },
+      {
+        "api": "BindAnim",
+        "available": false
+      },
+      {
+        "api": "EvaluateBoundAnim",
+        "available": false
+      },
+      {
+        "api": "AddAnim",
+        "available": false
+      },
+      {
+        "api": "GetAnims",
+        "available": false
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "linear_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "step_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "capture": "squirrel-aaa.png",
+        "frames": 64
+      },
+      {
+        "completed": true
+      }
+    ],
+    "log_tail": "dAnim\",\"available\":false}\r\nPROBE {\"api\":\"GetAnims\",\"available\":false}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.000000,\"parent_x\":0.000000000,\"child_world_x\":0.000000000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.250000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.000000,\"parent_x\":0.000000000,\"child_world_x\":0.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.250000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\n(1264138:898:955:000) Creating texture 'capture-color' (empty 640x480)\r\n(1264138:898:968:600) Creating texture 'capture-depth' (empty 640x480)\r\n(1264138:898:985:900) Creating texture 'readback' (empty 640x480)\r\n(1264138:899:056:100) On-request loading pipeline shader program 'core/shader/pbr_var-0_pipe-forward-cfg-0'\r\n(1264138:899:224:400) On-request loading pipeline shader program 'core/shader/pbr_var-0_pipe-forward-cfg-5'\r\nPROBE {\"capture\":\"squirrel-aaa.png\",\"frames\":64}\r\nPROBE {\"completed\":true}\r\n"
+  }
+]

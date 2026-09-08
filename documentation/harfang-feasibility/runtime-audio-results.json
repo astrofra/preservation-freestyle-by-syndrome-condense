@@ -1,0 +1,256 @@
+[
+  {
+    "language": "lua",
+    "exit_code": 3221226505,
+    "seconds": 2.698837999952957,
+    "records": [
+      {
+        "language": "Lua",
+        "nodes": 5,
+        "aaa_valid": true
+      },
+      {
+        "api": "BindAnim",
+        "available": false
+      },
+      {
+        "api": "EvaluateBoundAnim",
+        "available": false
+      },
+      {
+        "api": "AddAnim",
+        "available": false
+      },
+      {
+        "api": "GetAnims",
+        "available": false
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "linear_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "step_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "capture": "lua-aaa.png",
+        "frames": 64
+      },
+      {
+        "xm_source": 0,
+        "duration_seconds": 203.102005
+      },
+      {
+        "xm_seek": 0,
+        "accepted": true,
+        "timecode_seconds": 0.382
+      },
+      {
+        "xm_seek": 5,
+        "accepted": false,
+        "timecode_seconds": 0.48175
+      },
+      {
+        "xm_seek": 120,
+        "accepted": false,
+        "timecode_seconds": 0.6025
+      },
+      {
+        "completed": true
+      }
+    ],
+    "log_tail": "0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.000000,\"parent_x\":0.000000000,\"child_world_x\":0.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.250000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\n(1264122:831:767:800) Creating texture 'capture-color' (empty 640x480)\r\n(1264122:831:784:900) Creating texture 'capture-depth' (empty 640x480)\r\n(1264122:831:807:400) Creating texture 'readback' (empty 640x480)\r\n(1264122:831:874:300) On-request loading pipeline shader program 'core/shader/pbr_var-0_pipe-forward-cfg-0'\r\n(1264122:832:047:900) On-request loading pipeline shader program 'core/shader/pbr_var-0_pipe-forward-cfg-5'\r\nPROBE {\"capture\":\"lua-aaa.png\",\"frames\":64}\r\n(1264123:949:366:700) OpenAL ready on device 'OpenAL Soft' - @44100hz\r\nPROBE {\"xm_source\":0,\"duration_seconds\":203.102005}\r\nPROBE {\"xm_seek\":0,\"accepted\":true,\"timecode_seconds\":0.382000}\r\nPROBE {\"xm_seek\":5,\"accepted\":false,\"timecode_seconds\":0.481750}\r\nPROBE {\"xm_seek\":120,\"accepted\":false,\"timecode_seconds\":0.602500}\r\nPROBE {\"completed\":true}\r\n"
+  },
+  {
+    "language": "squirrel",
+    "exit_code": 3221226505,
+    "seconds": 2.6756464999634773,
+    "records": [
+      {
+        "language": "Squirrel",
+        "nodes": 5,
+        "aaa_valid": true
+      },
+      {
+        "api": "BindAnim",
+        "available": false
+      },
+      {
+        "api": "EvaluateBoundAnim",
+        "available": false
+      },
+      {
+        "api": "AddAnim",
+        "available": false
+      },
+      {
+        "api": "GetAnims",
+        "available": false
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "linear_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "linear_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.0,
+        "parent_x": 0.0,
+        "child_world_x": 0.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.25,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "animation": "step_probe",
+        "time": 0.5,
+        "parent_x": 0.5625,
+        "child_world_x": 0.5625
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.0,
+        "parent_x": 1.0,
+        "child_world_x": 1.0
+      },
+      {
+        "animation": "step_probe",
+        "time": 1.5,
+        "parent_x": 0.8671875,
+        "child_world_x": 0.8671875
+      },
+      {
+        "animation": "step_probe",
+        "time": 2.5,
+        "parent_x": 0.2265625,
+        "child_world_x": 0.2265625
+      },
+      {
+        "capture": "squirrel-aaa.png",
+        "frames": 64
+      },
+      {
+        "xm_source": 0,
+        "duration_seconds": 203.102005
+      },
+      {
+        "xm_seek": 0,
+        "accepted": true,
+        "timecode_seconds": 0.382312
+      },
+      {
+        "xm_seek": 5,
+        "accepted": false,
+        "timecode_seconds": 0.492437
+      },
+      {
+        "xm_seek": 120,
+        "accepted": false,
+        "timecode_seconds": 0.592187
+      },
+      {
+        "completed": true
+      }
+    ],
+    "log_tail": "000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"linear_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.000000,\"parent_x\":0.000000000,\"child_world_x\":0.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.250000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":0.500000,\"parent_x\":0.562500000,\"child_world_x\":0.562500000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.000000,\"parent_x\":1.000000000,\"child_world_x\":1.000000000}\r\nPROBE {\"animation\":\"step_probe\",\"time\":1.500000,\"parent_x\":0.867187500,\"child_world_x\":0.867187500}\r\nPROBE {\"animation\":\"step_probe\",\"time\":2.500000,\"parent_x\":0.226562500,\"child_world_x\":0.226562500}\r\n(1264125:529:918:200) Creating texture 'capture-color' (empty 640x480)\r\n(1264125:529:932:000) Creating texture 'capture-depth' (empty 640x480)\r\n(1264125:529:947:900) Creating texture 'readback' (empty 640x480)\r\n(1264125:530:013:900) On-request loading pipeline shader program 'core/shader/pbr_var-0_pipe-forward-cfg-0'\r\n(1264125:530:177:100) On-request loading pipeline shader program 'core/shader/pbr_var-0_pipe-forward-cfg-5'\r\nPROBE {\"capture\":\"squirrel-aaa.png\",\"frames\":64}\r\n(1264126:653:961:500) OpenAL ready on device 'OpenAL Soft' - @44100hz\r\nPROBE {\"xm_source\":0,\"duration_seconds\":203.102005}\r\nPROBE {\"xm_seek\":0,\"accepted\":true,\"timecode_seconds\":0.382312}\r\nPROBE {\"xm_seek\":5,\"accepted\":false,\"timecode_seconds\":0.492437}\r\nPROBE {\"xm_seek\":120,\"accepted\":false,\"timecode_seconds\":0.592187}\r\nPROBE {\"completed\":true}\r\n"
+  }
+]

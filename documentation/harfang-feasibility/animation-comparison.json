@@ -1,0 +1,794 @@
+{
+  "camera_totals": {
+    "0_position_units": {
+      "max_abs": 4.209753513336182,
+      "rms": 0.16032322209575828,
+      "samples": 8481
+    },
+    "0_rotation_degrees": {
+      "max_abs": 19.332956314086914,
+      "rms": 1.7705830363630595,
+      "samples": 8481
+    },
+    "120_position_units": {
+      "max_abs": 0.4756404161453247,
+      "rms": 0.006971808645346065,
+      "samples": 8481
+    },
+    "120_rotation_degrees": {
+      "max_abs": 1.8614529371261597,
+      "rms": 0.023950108463432783,
+      "samples": 8481
+    },
+    "30_position_units": {
+      "max_abs": 4.551027774810791,
+      "rms": 0.0835714164881854,
+      "samples": 8481
+    },
+    "30_rotation_degrees": {
+      "max_abs": 22.715524673461914,
+      "rms": 0.3762556723663881,
+      "samples": 8481
+    },
+    "60_position_units": {
+      "max_abs": 1.6742364168167114,
+      "rms": 0.026499312975924356,
+      "samples": 8481
+    },
+    "60_rotation_degrees": {
+      "max_abs": 6.552901744842529,
+      "rms": 0.09913961906869476,
+      "samples": 8481
+    }
+  },
+  "inventory": {
+    "keys_with_continuity": 0,
+    "keys_with_tension_or_bias": 0,
+    "linear_keys": 175,
+    "motion_keys": 3876,
+    "one_frame_intervals_all_tracks": 749,
+    "scene_lights": 24,
+    "scene_object_instances": 239,
+    "unique_loaded_meshes": 61
+  },
+  "scenes": [
+    {
+      "animated_dissolves": 0,
+      "animated_objects": 4,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 2.1031723022460938,
+            "rms": 0.2545368437910699,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 2.49603271484375,
+            "rms": 0.4155623883980392,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 1.52587890625e-05,
+            "rms": 1.9725792998294176e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 9.1552734375e-05,
+            "rms": 1.1812555202263356e-05,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 0.026233673095703125,
+            "rms": 0.0009504284809877981,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.01373291015625,
+            "rms": 0.0005925420346634681,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 9.918212890625e-05,
+            "rms": 4.247283084319254e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.00177001953125,
+            "rms": 7.027573720337297e-05,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 24.0,
+      "emitters": 1,
+      "first_frame": 1.0,
+      "fps": 21.0,
+      "height": 480,
+      "last_frame": 510.0,
+      "lights": 2,
+      "name": "0_sceneTunnelAnim.lws",
+      "nonzero_pivots": 11,
+      "objects": 12,
+      "parented_objects": 8,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 7,
+      "animated_objects": 19,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 0.19146811962127686,
+            "rms": 0.060328038244231955,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 7.692134857177734,
+            "rms": 1.6037987457938054,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 0.0004864931106567383,
+            "rms": 2.470332372891582e-05,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.02893829345703125,
+            "rms": 0.001083329508396898,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 0.0012860298156738281,
+            "rms": 5.598734126513273e-05,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0363311767578125,
+            "rms": 0.0018461712294728133,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 0.0005726516246795654,
+            "rms": 2.904186696962692e-05,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.033935546875,
+            "rms": 0.0012701726766954986,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 13.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 360,
+      "last_frame": 420.0,
+      "lights": 3,
+      "name": "1_ZomBie.lws",
+      "nonzero_pivots": 26,
+      "objects": 39,
+      "parented_objects": 33,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 1,
+      "animated_objects": 0,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 8.513311045099956e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 7.614536884177311e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 6.594382379751158e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 8.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 350,
+      "last_frame": 210.0,
+      "lights": 1,
+      "name": "2_LogoFREESTYLE.lws",
+      "nonzero_pivots": 0,
+      "objects": 1,
+      "parented_objects": 0,
+      "width": 480
+    },
+    {
+      "animated_dissolves": 1,
+      "animated_objects": 10,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 0.20977182686328888,
+            "rms": 0.021610316584035283,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 4.803110122680664,
+            "rms": 0.6204565693108324,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 0.003471851348876953,
+            "rms": 0.00016553415739432956,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 1.1444091796875e-05,
+            "rms": 2.1050640093664537e-06,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 0.008886337280273438,
+            "rms": 0.0006385640792964905,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.06413102149963379,
+            "rms": 0.0023327003441243476,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 0.005900859832763672,
+            "rms": 0.000366470484756667,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0053882598876953125,
+            "rms": 0.00019646440844427166,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 28.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 360,
+      "last_frame": 900.0,
+      "lights": 2,
+      "name": "3_Colline.lws",
+      "nonzero_pivots": 19,
+      "objects": 30,
+      "parented_objects": 18,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 1,
+      "animated_objects": 32,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 0.7856729030609131,
+            "rms": 0.11660273024387435,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 4.5611572265625,
+            "rms": 0.8560861432091783,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 6.4373016357421875e-06,
+            "rms": 7.146012906195849e-07,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.000225067138671875,
+            "rms": 2.627412272414019e-05,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 0.002516508102416992,
+            "rms": 0.00013167636961654161,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.031982421875,
+            "rms": 0.0015335026941397112,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 9.250640869140625e-05,
+            "rms": 5.36253887339014e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0028076171875,
+            "rms": 0.0001479575907663345,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 23.0,
+      "emitters": 1,
+      "first_frame": 1.0,
+      "fps": 45.0,
+      "height": 480,
+      "last_frame": 1060.0,
+      "lights": 3,
+      "name": "4_SceneChampi.lws",
+      "nonzero_pivots": 10,
+      "objects": 45,
+      "parented_objects": 9,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 2,
+      "animated_objects": 0,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 1.3370687350003048e-05,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 1.243448666255767e-05,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 1.2817175477514826e-05,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 7.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 480,
+      "last_frame": 600.0,
+      "lights": 1,
+      "name": "5_ChampiGIRLgfx.lws",
+      "nonzero_pivots": 0,
+      "objects": 2,
+      "parented_objects": 0,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 4,
+      "animated_objects": 9,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 0.698936939239502,
+            "rms": 0.12620006567917277,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 19.332956314086914,
+            "rms": 3.7847999534903263,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 1.9073486328125e-06,
+            "rms": 4.143306109351508e-07,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 6.103515625e-05,
+            "rms": 7.191184083254076e-06,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 0.04500555992126465,
+            "rms": 0.0020413440034876924,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 4.8655242919921875,
+            "rms": 0.17927274202676033,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 9.012222290039063e-05,
+            "rms": 3.297666676704463e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0050904154777526855,
+            "rms": 0.0002008769049486198,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 1,
+      "duration": 28.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 360,
+      "last_frame": 900.0,
+      "lights": 2,
+      "name": "55_ToTheManor.lws",
+      "nonzero_pivots": 18,
+      "objects": 32,
+      "parented_objects": 21,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 0,
+      "animated_objects": 16,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 4.209753513336182,
+            "rms": 0.3705720540096565,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 16.441078186035156,
+            "rms": 2.675494469388522,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 0.4756404161453247,
+            "rms": 0.02312226114352203,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 1.8614529371261597,
+            "rms": 0.07942612888179489,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 4.551027774810791,
+            "rms": 0.2771649444399571,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 22.715524673461914,
+            "rms": 1.234940719025171,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 1.6742364168167114,
+            "rms": 0.08788745793556038,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 6.552901744842529,
+            "rms": 0.32880510745906855,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 4,
+      "duration": 16.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 360,
+      "last_frame": 500.0,
+      "lights": 3,
+      "name": "6_HOUSEofTHEkitCH.lws",
+      "nonzero_pivots": 20,
+      "objects": 21,
+      "parented_objects": 17,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 1,
+      "animated_objects": 17,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 0.14432811737060547,
+            "rms": 0.05102120950950671,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 8.505615234375,
+            "rms": 2.143982989506989,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 3.039836883544922e-06,
+            "rms": 2.3680405429658773e-07,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0002288818359375,
+            "rms": 1.0239011938588759e-05,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 0.0005021095275878906,
+            "rms": 2.5092349398065804e-05,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0955810546875,
+            "rms": 0.0038139380321264046,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 1.4185905456542969e-05,
+            "rms": 1.191300244100402e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.00144195556640625,
+            "rms": 6.806077454405107e-05,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 20.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 360,
+      "last_frame": 620.0,
+      "lights": 1,
+      "name": "7_TheTRAP!.lws",
+      "nonzero_pivots": 21,
+      "objects": 26,
+      "parented_objects": 18,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 3,
+      "animated_objects": 10,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 1.1498031616210938,
+            "rms": 0.21069870392564705,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 13.766716003417969,
+            "rms": 2.1312555964975473,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 1.1444091796875e-05,
+            "rms": 1.4466350844920961e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 9.1552734375e-05,
+            "rms": 1.0329235739787638e-05,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 0.008403778076171875,
+            "rms": 0.0003036917517003511,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.079071044921875,
+            "rms": 0.0028716941896224017,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 0.002590179443359375,
+            "rms": 9.361119879786047e-05,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.02435302734375,
+            "rms": 0.0008844873968158817,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 33.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 360,
+      "last_frame": 1300.0,
+      "lights": 5,
+      "name": "8_Wgon.lws",
+      "nonzero_pivots": 18,
+      "objects": 30,
+      "parented_objects": 27,
+      "width": 640
+    },
+    {
+      "animated_dissolves": 1,
+      "animated_objects": 0,
+      "camera_comparison": {
+        "0": {
+          "position_units": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "120": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 6.594382379751158e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "30": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 7.614536884177311e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        },
+        "60": {
+          "position_units": {
+            "max_abs": 6.103515625e-05,
+            "rms": 5.81569860896262e-06,
+            "samples": 771
+          },
+          "rotation_degrees": {
+            "max_abs": 0.0,
+            "rms": 0.0,
+            "samples": 771
+          }
+        }
+      },
+      "camera_one_frame_intervals": 0,
+      "duration": 10.0,
+      "emitters": 0,
+      "first_frame": 1.0,
+      "fps": 30.0,
+      "height": 480,
+      "last_frame": 600.0,
+      "lights": 1,
+      "name": "9_SyndromeFINAL.lws",
+      "nonzero_pivots": 0,
+      "objects": 1,
+      "parented_objects": 0,
+      "width": 640
+    }
+  ],
+  "scope": "Actual native loader; HARFANG v3.3.0 EvaluateHermite<float> compiled from pinned headers. Camera channel errors, not image or world-matrix parity."
+}

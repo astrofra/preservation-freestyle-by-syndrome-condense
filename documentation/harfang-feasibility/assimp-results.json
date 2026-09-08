@@ -1,0 +1,62 @@
+[
+  {
+    "name": "lws-original",
+    "command": [
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\release\\hg-assimp_converter-win64\\assimp_converter\\assimp_converter.exe",
+      "C:\\works\\projects\\preservation-freestyle-demo\\demo-assets\\cds-freestyle\\D\\FreeStyle\\0_sceneTunnelAnim.lws",
+      "-out",
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\imports\\lws-original",
+      "-base-resource-path",
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\imports\\lws-original",
+      "-profile",
+      "pbr_default",
+      "-all-policy",
+      "overwrite",
+      "-import-animation"
+    ],
+    "exit_code": 1,
+    "scene_results": [],
+    "files": 0,
+    "log_excerpt": "Assimp Converter 3.3.0 (9d6aeaf19b195ee8266f1aba51d6b5eb5b395baa)\r\nError while loading file 'C:\\works\\projects\\preservation-freestyle-demo\\demo-assets\\cds-freestyle\\D\\FreeStyle\\0_sceneTunnelAnim.lws' :\r\nCannot parse string \"EndBehavior???????????????????\" as a real number: does not start with digit or decimal point followed by digit.\r\n[ImportScene: KO]\r\n"
+  },
+  {
+    "name": "lws-paths-fixed",
+    "command": [
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\release\\hg-assimp_converter-win64\\assimp_converter\\assimp_converter.exe",
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\imports\\tunnel-paths-fixed.lws",
+      "-out",
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\imports\\lws-paths-fixed",
+      "-base-resource-path",
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\imports\\lws-paths-fixed",
+      "-profile",
+      "pbr_default",
+      "-all-policy",
+      "overwrite",
+      "-import-animation"
+    ],
+    "exit_code": 1,
+    "scene_results": [],
+    "files": 0,
+    "log_excerpt": "Assimp Converter 3.3.0 (9d6aeaf19b195ee8266f1aba51d6b5eb5b395baa)\r\nError while loading file 'C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\imports\\tunnel-paths-fixed.lws' :\r\nCannot parse string \"EndBehavior???????????????????\" as a real number: does not start with digit or decimal point followed by digit.\r\n[ImportScene: KO]\r\n"
+  },
+  {
+    "name": "lwo-original",
+    "command": [
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\release\\hg-assimp_converter-win64\\assimp_converter\\assimp_converter.exe",
+      "C:\\works\\projects\\preservation-freestyle-demo\\demo-assets\\cds-freestyle\\D\\FreeStyle\\GIRL-tete.lwo",
+      "-out",
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\imports\\lwo-original",
+      "-base-resource-path",
+      "C:\\works\\projects\\preservation-freestyle-demo\\analysis\\harfang-feasibility\\imports\\lwo-original",
+      "-profile",
+      "pbr_default",
+      "-all-policy",
+      "overwrite",
+      "-import-animation"
+    ],
+    "exit_code": 1,
+    "scene_results": [],
+    "files": 0,
+    "log_excerpt": "Assimp Converter 3.3.0 (9d6aeaf19b195ee8266f1aba51d6b5eb5b395baa)\r\nError while loading file 'C:\\works\\projects\\preservation-freestyle-demo\\demo-assets\\cds-freestyle\\D\\FreeStyle\\GIRL-tete.lwo' :\r\nLWO: Unable to build a valid node graph\r\n[ImportScene: KO]\r\n"
+  }
+]

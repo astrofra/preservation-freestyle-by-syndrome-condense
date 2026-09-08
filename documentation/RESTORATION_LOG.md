@@ -284,3 +284,167 @@ known; individual execution times were not recorded, so none are invented here.
   milestone is complete; no unresolved build or playback blocker remains on
   the tested Windows host. The visual limitations and untested native platforms
   listed above remain explicit follow-up work.
+
+## 2026-09-08 22:23 — HARFANG AAA feasibility study
+
+This entry records the investigation and its successful and unsuccessful
+experiments. Times below are local Europe/Paris where an individual log timestamp
+is available. The requested deliverable is a study, not implementation of the
+complete HARFANG demo.
+
+- Read the HARFANG skill and its project guide, and announced their use. Checked
+  repository instructions and working-tree state. Existing untracked web files,
+  the web export executable, conversation logs and web-validation files were
+  present before this work and were left in place. No native player source,
+  original asset, existing engine checkout or original release was modified.
+- Reviewed the native restoration, scene loader, renderer, binary-derived
+  timeline and existing image/audio validation. The current journal ended at the
+  native packaged delivery; earlier entries were preserved rather than replaced
+  from conversation archives.
+- Queried the user's HARFANG fork and latest release. Pinned v3.3.0 to
+  `2bd99d2ad654f8579b21bfbdcc6ab61f2628ea7a`, published 6 September 2026.
+  Downloaded the complete recursive tree metadata (9,018 entries, not truncated)
+  and relevant source files. The other local HARFANG checkout was older and was
+  not used for API conclusions or builds.
+- Downloaded assetc, Assimp converter, glTF importer, documentation, Lua/Bullet
+  and Squirrel/Bullet Windows archives. Verified their sizes and SHA-256 digests
+  against release metadata before using them. Extracted inside the ignored
+  `analysis/harfang-feasibility/release/` workspace after checking archive paths.
+  Retained a public download manifest under documentation.
+- Compared binary build IDs with the release tag. Tools report
+  `9d6aeaf19b195ee8266f1aba51d6b5eb5b395baa`; runtimes report
+  `2af58be185bdf94fd5f61ec5e20a05fb1d6cbb46`. Compared intervening commits:
+  inspected Scene/animation/binding implementations were unchanged; audio
+  packaging CMake had changes. Recorded the distinction instead of describing
+  binaries as exact builds of the tag.
+- Initial command discovery at 21:53: `-help` was not a valid help option for
+  the converters; assetc interpreted it as an input path. Calling the converters
+  without arguments supplied usage. These failed discovery commands and usage
+  output remain in the raw logs.
+- Direct Assimp experiments at 21:54 failed. Original tunnel LWS returned exit 1
+  with a numeric parse error near EndBehavior. A copied LWS with LoadObject and
+  BGImage references resolved to absolute paths failed identically. Original
+  GIRL-tete.lwo returned exit 1, unable to build a valid node graph. No output
+  assets were produced. Stopped this route instead of attempting an Assimp repair.
+  Retained exact commands and errors in `harfang-feasibility/assimp-results.json`.
+- Incorporated the user's confirmation that these nxNG productions use
+  pre-6.0 LightWave. Raw inventory confirms all 11 scenes begin with LWSC 1 and
+  all 64 objects have the LWOB FORM type. There are also 12 MOA files. A limited
+  line-prefix scan found no Bone/Morph/IK/TargetObject declarations.
+- Added a standalone CMake C++17 probe using the actual native scene/LWOB loader
+  and HARFANG's header-defined Hermite evaluator. One initial tool patch failed
+  because CMake placeholders were interpreted by the JavaScript wrapper; the
+  corrected patch preserves literal placeholders. Configured and built with
+  Visual Studio 2022/MSVC 19.41.34120.0, Windows SDK 10.0.22621.0. Build and
+  execution succeeded. This is explicitly not a full HARFANG C++ SDK build.
+- The loader found 239 object instances, 61 unique used meshes and 24 lights
+  across 11 scenes. Across motion/envelope tracks: 3,876 keys, 175 linear flags,
+  749 one-frame intervals, and zero nonzero tension/continuity/bias values.
+  Measured camera interpolation at 257 off-grid times per clip across six
+  channels. Naive copy maximum errors were 4.20975 position units / 19.33296
+  degrees. Uniform 30, 60 and 120 Hz baking improved RMS progressively, but
+  120 Hz still reached 0.47564 units / 1.86145 degrees. Recorded all results in
+  `harfang-feasibility/animation-comparison.json`. Rejected simple uniform baking
+  as proof of fidelity; proposed explicit cut segmentation and adaptive checks.
+- Inspected native Scene/Anim serialization, geometry, bindings, material
+  animation targets, camera/light targets, playback time quantization, AAA
+  configuration and light slots. Confirmed Squirrel is an available host
+  language in this fork; scene-embedded scripting remains Lua. Full track
+  authoring and bound-animation evaluation are accessible in C++ but absent
+  from the queried script Scene APIs.
+- Created a bounded geometry fixture using the existing untracked
+  `web/assets/demo.json` export. Selected the real 423-triangle GIRL-tete mesh
+  with six material partitions, attached it to a parent node and added two
+  synthetic translation clips with LINEAR and STEP interpolation. This source
+  uses simplified double-sided PBR materials and provisional basis conversion;
+  it is not a restored camera/material/animation test.
+- First glTF geometry attempt failed silently: non-indexed primitives produced
+  an empty 73-byte geometry while the importer returned success. Early captures
+  were black and were not accepted as rendering evidence. Added explicit
+  indices, but the empty geometry remained because `-all-policy overwrite` was
+  overridden by per-category defaults. Source inspection explained the behavior.
+  Corrected to explicit `-geometry-policy overwrite -scene-policy overwrite`
+  and asserted a populated geometry file. The corrected import at 22:11
+  succeeded and subsequently produced visible geometry.
+- Copied 231 pinned core resource files (5,988,937 bytes) and the unchanged XM
+  into generated editable assets. The first DX11 assetc pass completed at 22:02,
+  processing 234 inputs and 927 outputs with no failures in about 68 seconds.
+  Incremental passes after fixture corrections also succeeded. Runtime search
+  paths point only at `assets_compiled`.
+- Added equivalent hidden-window Lua and Squirrel programs that load the
+  compiled native Scene, exercise SceneAnim, add a camera/lights, use the
+  actual AAA pipeline through SubmitSceneToPipeline and capture PNGs. No
+  runtime triangle-list submission was used. Queries confirmed BindAnim,
+  EvaluateBoundAnim, AddAnim and GetAnims unavailable on the script Scene object.
+- Both imported glTF clips evaluate identically: at 0.5 seconds, parent and
+  child world X are 0.5625, versus expected LINEAR 0.5 and STEP 0. The native
+  exported tracks are identical. This demonstrates functioning hierarchy and
+  SceneAnim playback while disproving interpolation preservation through this
+  glTF importer.
+- Initial mixed graphics/audio probes around 22:05 exited abnormally; the
+  first Squirrel log was truncated. Added explicit resource cleanup and an
+  option to isolate audio. Cleanup alone did not resolve the mixed-run failure.
+  Preserved initial result JSON and raw logs as unsuccessful history.
+- Module-audio tests opened the actual Mush.xm at zero volume and observed an
+  advancing clock, with reported duration 203.102005 seconds. Seek to zero
+  returned true but the reported queued playback remained around 0.38 seconds;
+  seeks to 5 and 120 seconds returned false. The final audio-enabled tests,
+  repeated with the corrected populated geometry at 22:15, both printed
+  completion then exited 3221226505 / 0xC0000409. Stopped at this reproducible
+  blocker; did not patch/rebuild the engine.
+- Source review found the XMP adapter rejects every nonzero xmp_seek_time return
+  even though the vendored function returns an order position on success.
+  It also seeks by order boundary, and HARFANG's source-timecode call does not
+  flush queued OpenAL buffers. Timer startup/shutdown code suggests a joinable
+  global thread as a possible interpreter-exit cause. This last explanation is
+  an inference, not a debugger-confirmed diagnosis. Launchers were inspected
+  but not execution-tested. Recommended retaining libxm/miniaudio or repairing
+  and validating the native audio interface before depending on it.
+- The final render-only tests at 22:16 both exited 0 with valid AAA resources,
+  matching animation values and 640x480 captures after 64 frames. Viewed the
+  resulting image and confirmed visible geometry. Lua/Squirrel maximum RGB
+  difference is one 8-bit level, with matching nonblack bounds. These results
+  are not original-demo image conformity or a meaningful full-demo benchmark.
+- Added a dependency fetcher with pinned archive/source hashes and archive path
+  checks. It successfully verified/extracted the cached six archives and
+  verified 311 required source/core files. A fresh network bootstrap was not
+  performed. Added reproduction instructions explicitly noting the fixture's
+  dependency on the existing untracked web JSON.
+- Wrote `HARFANG_FEASIBILITY.md` in English, covering tested/rejected conversion
+  routes, native Scene and animation architecture, AAA appearance differences,
+  Lua/Squirrel/C++ comparison, XM blockers, reference timing, portability,
+  suggested acceptance gates and estimates. Added structured evidence and
+  captures under `documentation/harfang-feasibility/`. Downloads, full raw logs
+  and compiled/generated working data remain ignored under analysis.
+- A later source search included nonexistent `src/lwob.h`; the shared data
+  structures are in `src/scene.h`. Corrected the lookup; this did not affect
+  builds or results.
+- No complete Freestyle Scene was converted, no 210-second AAA qualification
+  was run, and no C++ SDK, macOS or Linux application build was attempted.
+  The study recommends a C++ converter and preferably a C++ player, with Lua
+  as a viable runtime given native support for exact clock/animation controls;
+  Squirrel passed the same rendering tests but has the same conversion limits.
+- Final documentation validation parsed all seven evidence JSON files and all
+  three Python probe scripts, verified five evidence hashes, checked local
+  Markdown links and pinned upstream paths, and confirmed the recorded success
+  versus failure exit codes. The first link check caught an incorrect glTF
+  source URL; corrected it to `tools/gltf_converter/gltf_importer.cpp` and the
+  repeat check passed. Checked trailing whitespace in all added text files;
+  `git diff --check` also passed. No native regression suite was rerun because
+  native application source/build configuration was unchanged.
+- The feasibility deliverable is complete in `documentation/HARFANG_FEASIBILITY.md`,
+  with reproduction instructions and bounded proof programs alongside it.
+  Direct-import and module-audio blockers remain explicitly documented for
+  discussion before implementation; no full-port completion is claimed.
+
+## 2026-09-08 22:27 — Reusable legacy LightWave importer proposal
+
+- Considered the user's suggestion of a LightWave 5.0 importer for HARFANG.
+  Extended the feasibility study with a bounded architecture: reusable source
+  reader, explicit interpretation profile, and native HARFANG asset exporter.
+- Distinguished tested nxNG playback behavior from still-unverified LightWave
+  Layout semantics. Kept Freestyle's binary timeline and special holds outside
+  the generic reader. Proposed source provenance, unsupported-feature reporting
+  and validation on a second independent production before broader claims.
+- This was a documentation refinement. No new importer, historical-format
+  investigation, runtime experiment or engine modification was performed.
